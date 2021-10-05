@@ -1,4 +1,3 @@
-/*
 create database Catalog 
     on ( name = Catalog_dat
        , filename = 'c:\mssql\Catalog\catalog_dat.mdf'
@@ -14,7 +13,7 @@ log on ( name = Catalog_log
        )
 ;
 go
-*/
+
 
 
 
@@ -111,7 +110,7 @@ select *
 select *
  from SupplierParts
 ;
-go
+go*
 */
 
 
@@ -131,5 +130,55 @@ select sp.SupplierID, sum(Amount*(p.PartPrice*((100-s.SupplierDiscount)*0.01))) 
   join Parts p on p.PartID = sp.PartID
   join Suppliers s on s.SupplierID = sp.SupplierID
   group by sp.SupplierID
+;
+go
+
+
+--Aufgabe 5c / Welche Teile werden aus der Stadt von L3 geliefert
+select PartName
+  from parts
+ where PartCity = (select SupplierCity
+					 from Suppliers
+					where SupplierID = 'L3'
+				   )
+;
+go
+
+
+--Aufgabe 6 / Datenbank in WhoSuppliesWhat umbenennen
+alter database Catalog modify name = WhoSuppliesWhat
+;
+go
+
+
+--Aufgabe 7 / Fügen Sie der Datenbank mit einem SQL Skript ein weiteres Datenfile hinzu (mit ALTER DATABASE)
+alter database WhoSuppliesWhat 
+  add file ( name = WhoSuppliesWhat
+           , filename = 'c:\mssql\Catalog\WhoSuppliesWhat_dat.ndf'
+           , size = 10 MB
+           , maxsize = 1 GB
+           , filegrowth = 50 MB
+  )
+;
+go
+
+
+/*Aufgabe 8
+a) Go ist kein Transact-SQL statement, es ist ein Befehl, der von sqlcmd, osql utilities und SSMS erkannt wird.
+b) Man kann den Speicherort im SSMS und mit
+select *
+from sys.database_files
+;
+go*/
+
+
+
+--Aufgabe 9 / Löschen Sie die Datenbank
+--Use Master, sodass WhoSuppliesWhat nichtmehr benutzt wird
+use master
+;
+go
+
+drop database if exists WhoSuppliesWhat
 ;
 go

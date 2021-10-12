@@ -1,1 +1,10 @@
+.LabelText {
+  font-family: 'italic', serif;
+  font-size: 200%;
+}
 
+
+.HomeIcon {
+  max-width: 33%;
+  max-height: 100px
+}

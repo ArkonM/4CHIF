@@ -15,6 +15,10 @@ log on ( name = Catalog_log
 go
 
 
+use Catalog;
+go
+
+
 
 
 drop table if exists SupplierParts;
@@ -163,13 +167,13 @@ alter database WhoSuppliesWhat
 go
 
 
-/*Aufgabe 8
-a) Go ist kein Transact-SQL statement, es ist ein Befehl, der von sqlcmd, osql utilities und SSMS erkannt wird.
-b) Man kann den Speicherort im SSMS und mit
+--Aufgabe 8
+--a) Go ist kein Transact-SQL statement, es ist ein Befehl, der von sqlcmd, osql utilities und SSMS erkannt wird.
+--b) Man kann den Speicherort im SSMS und mit
 select *
 from sys.database_files
 ;
-go*/
+go
 
 
 

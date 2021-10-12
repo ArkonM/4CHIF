@@ -1,0 +1,9 @@
+Berta 1000
+Alexander 1000
+Berta 3000
+Fritz 9000
+Claudia 8000
+Alexander 2000
+Fritz 1000
+Fritz 2000
+Fritz 3000

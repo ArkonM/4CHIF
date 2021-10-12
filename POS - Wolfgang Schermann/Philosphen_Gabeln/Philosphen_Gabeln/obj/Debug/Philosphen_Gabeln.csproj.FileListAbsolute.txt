@@ -1,0 +1,14 @@
+C:\Users\armin\source\repos\Philosphen_Gabeln\Philosphen_Gabeln\obj\Debug\Philosphen_Gabeln.csprojAssemblyReference.cache
+C:\Users\armin\source\repos\Philosphen_Gabeln\Philosphen_Gabeln\obj\Debug\MainWindow.g.cs
+C:\Users\armin\source\repos\Philosphen_Gabeln\Philosphen_Gabeln\obj\Debug\App.g.cs
+C:\Users\armin\source\repos\Philosphen_Gabeln\Philosphen_Gabeln\obj\Debug\Philosphen_Gabeln_MarkupCompile.cache
+C:\Users\armin\source\repos\Philosphen_Gabeln\Philosphen_Gabeln\obj\Debug\Philosphen_Gabeln_MarkupCompile.lref
+C:\Users\armin\source\repos\Philosphen_Gabeln\Philosphen_Gabeln\bin\Debug\Philosphen_Gabeln.exe.config
+C:\Users\armin\source\repos\Philosphen_Gabeln\Philosphen_Gabeln\bin\Debug\Philosphen_Gabeln.exe
+C:\Users\armin\source\repos\Philosphen_Gabeln\Philosphen_Gabeln\bin\Debug\Philosphen_Gabeln.pdb
+C:\Users\armin\source\repos\Philosphen_Gabeln\Philosphen_Gabeln\obj\Debug\MainWindow.baml
+C:\Users\armin\source\repos\Philosphen_Gabeln\Philosphen_Gabeln\obj\Debug\Philosphen_Gabeln.g.resources
+C:\Users\armin\source\repos\Philosphen_Gabeln\Philosphen_Gabeln\obj\Debug\Philosphen_Gabeln.Properties.Resources.resources
+C:\Users\armin\source\repos\Philosphen_Gabeln\Philosphen_Gabeln\obj\Debug\Philosphen_Gabeln.csproj.GenerateResource.cache
+C:\Users\armin\source\repos\Philosphen_Gabeln\Philosphen_Gabeln\obj\Debug\Philosphen_Gabeln.exe
+C:\Users\armin\source\repos\Philosphen_Gabeln\Philosphen_Gabeln\obj\Debug\Philosphen_Gabeln.pdb

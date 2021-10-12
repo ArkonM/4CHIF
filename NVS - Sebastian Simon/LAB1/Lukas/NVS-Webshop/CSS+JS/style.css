@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital@1&display=swap');
+
+
+
+
+.wellcomeHeadline {
+  font-family: 'Anton', sans-serif;
+  font-size: 260%;
+  color: white;
+  margin-top: 2%;
+  margin-left: 15%;
+}
+
+.wellcomeText {
+
+  font-size: 125%;
+  margin-left: 15%;
+  color: white;
+}
+
+.rundlicher {
+  border-radius: 15%;
+
+}
+
+.startText {
+  font-family: 'Crimson Text', serif;
+  font-size: 225%;
+}
+
+.textAktion {
+  font-family: 'Crimson Text', serif;
+  font-size: 225%;
+}
+
+.boxenHeight {
+  margin: 52.5px;
+}
+
+.banner {
+  background-image: url('../Images/Willkommensbanner.jpg');
+  min-height: 200px;
+  min-width: 100%;
+}
+
+.textPreisLeistung {
+  font-family: 'Crimson Text', serif;
+  font-size: 200%;
+}
+
+.shop-Produkt {
+  
+  margin: 52.5px;
+}
+
+.textProdukt {
+  font-family: 'Anton', sans-serif;
+  font-size: 200%;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  text-align: center;
+
+}
+
+.produktBeschreibung {
+  margin: 15px;
+  text-align: left;
+}
+
+.produktPreis {
+  margin-top: 25px;
+  font-size: 130%;
+}

@@ -7,6 +7,9 @@
 .HomeIcons {
   justify-content: center;
   max-width: 85%;
-  
+}
 
+a:link{
+  color:black;
+  text-decoration: none;
 }

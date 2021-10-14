@@ -1,0 +1,52 @@
+c:\users\wochi\documents\visual studio 2010\Projects\Raucher\Raucher\obj\x86\Debug\ResolveAssemblyReference.cache
+c:\users\wochi\documents\visual studio 2010\Projects\Raucher\Raucher\obj\x86\Debug\MainWindow.baml
+c:\users\wochi\documents\visual studio 2010\Projects\Raucher\Raucher\obj\x86\Debug\MainWindow.g.cs
+c:\users\wochi\documents\visual studio 2010\Projects\Raucher\Raucher\obj\x86\Debug\App.g.cs
+c:\users\wochi\documents\visual studio 2010\Projects\Raucher\Raucher\obj\x86\Debug\Raucher_MarkupCompile.cache
+c:\users\wochi\documents\visual studio 2010\Projects\Raucher\Raucher\obj\x86\Debug\Raucher.g.resources
+c:\users\wochi\documents\visual studio 2010\Projects\Raucher\Raucher\obj\x86\Debug\Raucher.Properties.Resources.resources
+c:\users\wochi\documents\visual studio 2010\Projects\Raucher\Raucher\obj\x86\Debug\GenerateResource.read.1.tlog
+c:\users\wochi\documents\visual studio 2010\Projects\Raucher\Raucher\obj\x86\Debug\GenerateResource.write.1.tlog
+c:\users\wochi\documents\visual studio 2010\Projects\Raucher\Raucher\bin\Debug\Raucher.exe
+c:\users\wochi\documents\visual studio 2010\Projects\Raucher\Raucher\bin\Debug\Raucher.pdb
+c:\users\wochi\documents\visual studio 2010\Projects\Raucher\Raucher\obj\x86\Debug\Raucher.exe
+c:\users\wochi\documents\visual studio 2010\Projects\Raucher\Raucher\obj\x86\Debug\Raucher.pdb
+H:\Documents\Programmieren IV\Raucher\Raucher\Raucher\obj\x86\Debug\Raucher.exe
+H:\Documents\Programmieren IV\Raucher\Raucher\Raucher\obj\x86\Debug\Raucher.pdb
+\\iPData-IF\scw$\Documents\Programmieren IV\Raucher\Raucher\Raucher\obj\x86\Debug\Raucher.exe
+\\iPData-IF\scw$\Documents\Programmieren IV\Raucher\Raucher\Raucher\obj\x86\Debug\Raucher.pdb
+\\iPData-IF\scw$\Documents\Programmieren IV\Raucher\Raucher\Raucher\bin\Debug\Raucher.exe
+\\iPData-IF\scw$\Documents\Programmieren IV\Raucher\Raucher\Raucher\bin\Debug\Raucher.pdb
+\\iPData-IF\scw$\Documents\Programmieren IV\Raucher\Raucher\Raucher\obj\x86\Debug\Raucher.csprojResolveAssemblyReference.cache
+\\iPData-IF\scw$\Documents\Programmieren IV\Raucher\Raucher\Raucher\obj\x86\Debug\MainWindow.baml
+\\iPData-IF\scw$\Documents\Programmieren IV\Raucher\Raucher\Raucher\obj\x86\Debug\MainWindow.g.cs
+\\iPData-IF\scw$\Documents\Programmieren IV\Raucher\Raucher\Raucher\obj\x86\Debug\App.g.cs
+\\iPData-IF\scw$\Documents\Programmieren IV\Raucher\Raucher\Raucher\obj\x86\Debug\Raucher_MarkupCompile.cache
+\\iPData-IF\scw$\Documents\Programmieren IV\Raucher\Raucher\Raucher\obj\x86\Debug\Raucher.g.resources
+\\iPData-IF\scw$\Documents\Programmieren IV\Raucher\Raucher\Raucher\obj\x86\Debug\Raucher.Properties.Resources.resources
+\\iPData-IF\scw$\Documents\Programmieren IV\Raucher\Raucher\Raucher\obj\x86\Debug\Raucher.csproj.GenerateResource.Cache
+C:\Users\Wolfgang Schermann\Downloads\Raucher mit Deadlock\Raucher\bin\Debug\Raucher.exe
+C:\Users\Wolfgang Schermann\Downloads\Raucher mit Deadlock\Raucher\bin\Debug\Raucher.pdb
+C:\Users\Wolfgang Schermann\Downloads\Raucher mit Deadlock\Raucher\obj\x86\Debug\Raucher.csproj.AssemblyReference.cache
+C:\Users\Wolfgang Schermann\Downloads\Raucher mit Deadlock\Raucher\obj\x86\Debug\MainWindow.baml
+C:\Users\Wolfgang Schermann\Downloads\Raucher mit Deadlock\Raucher\obj\x86\Debug\MainWindow.g.cs
+C:\Users\Wolfgang Schermann\Downloads\Raucher mit Deadlock\Raucher\obj\x86\Debug\App.g.cs
+C:\Users\Wolfgang Schermann\Downloads\Raucher mit Deadlock\Raucher\obj\x86\Debug\Raucher_MarkupCompile.cache
+C:\Users\Wolfgang Schermann\Downloads\Raucher mit Deadlock\Raucher\obj\x86\Debug\Raucher.g.resources
+C:\Users\Wolfgang Schermann\Downloads\Raucher mit Deadlock\Raucher\obj\x86\Debug\Raucher.Properties.Resources.resources
+C:\Users\Wolfgang Schermann\Downloads\Raucher mit Deadlock\Raucher\obj\x86\Debug\Raucher.csproj.GenerateResource.cache
+C:\Users\Wolfgang Schermann\Downloads\Raucher mit Deadlock\Raucher\obj\x86\Debug\Raucher.csproj.CoreCompileInputs.cache
+C:\Users\Wolfgang Schermann\Downloads\Raucher mit Deadlock\Raucher\obj\x86\Debug\Raucher.exe
+C:\Users\Wolfgang Schermann\Downloads\Raucher mit Deadlock\Raucher\obj\x86\Debug\Raucher.pdb
+C:\Users\armin\OneDrive\Dokumente\GitHub\4CHIF\POS - Wolfgang Schermann\Raucher mit Deadlock\Raucher\bin\Debug\Raucher.exe
+C:\Users\armin\OneDrive\Dokumente\GitHub\4CHIF\POS - Wolfgang Schermann\Raucher mit Deadlock\Raucher\bin\Debug\Raucher.pdb
+C:\Users\armin\OneDrive\Dokumente\GitHub\4CHIF\POS - Wolfgang Schermann\Raucher mit Deadlock\Raucher\obj\x86\Debug\Raucher.csprojAssemblyReference.cache
+C:\Users\armin\OneDrive\Dokumente\GitHub\4CHIF\POS - Wolfgang Schermann\Raucher mit Deadlock\Raucher\obj\x86\Debug\MainWindow.baml
+C:\Users\armin\OneDrive\Dokumente\GitHub\4CHIF\POS - Wolfgang Schermann\Raucher mit Deadlock\Raucher\obj\x86\Debug\MainWindow.g.cs
+C:\Users\armin\OneDrive\Dokumente\GitHub\4CHIF\POS - Wolfgang Schermann\Raucher mit Deadlock\Raucher\obj\x86\Debug\App.g.cs
+C:\Users\armin\OneDrive\Dokumente\GitHub\4CHIF\POS - Wolfgang Schermann\Raucher mit Deadlock\Raucher\obj\x86\Debug\Raucher_MarkupCompile.cache
+C:\Users\armin\OneDrive\Dokumente\GitHub\4CHIF\POS - Wolfgang Schermann\Raucher mit Deadlock\Raucher\obj\x86\Debug\Raucher.g.resources
+C:\Users\armin\OneDrive\Dokumente\GitHub\4CHIF\POS - Wolfgang Schermann\Raucher mit Deadlock\Raucher\obj\x86\Debug\Raucher.Properties.Resources.resources
+C:\Users\armin\OneDrive\Dokumente\GitHub\4CHIF\POS - Wolfgang Schermann\Raucher mit Deadlock\Raucher\obj\x86\Debug\Raucher.csproj.GenerateResource.cache
+C:\Users\armin\OneDrive\Dokumente\GitHub\4CHIF\POS - Wolfgang Schermann\Raucher mit Deadlock\Raucher\obj\x86\Debug\Raucher.exe
+C:\Users\armin\OneDrive\Dokumente\GitHub\4CHIF\POS - Wolfgang Schermann\Raucher mit Deadlock\Raucher\obj\x86\Debug\Raucher.pdb

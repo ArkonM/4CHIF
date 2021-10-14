@@ -1,0 +1,5 @@
+C:\Users\armin\OneDrive\Dokumente\GitHub\4CHIF\POS - Wolfgang Schermann\Achterbahn\Achterbahn\obj\Debug\Achterbahn.csprojAssemblyReference.cache
+C:\Users\armin\OneDrive\Dokumente\GitHub\4CHIF\POS - Wolfgang Schermann\Achterbahn\Achterbahn\obj\Debug\MainWindow.g.cs
+C:\Users\armin\OneDrive\Dokumente\GitHub\4CHIF\POS - Wolfgang Schermann\Achterbahn\Achterbahn\obj\Debug\App.g.cs
+C:\Users\armin\OneDrive\Dokumente\GitHub\4CHIF\POS - Wolfgang Schermann\Achterbahn\Achterbahn\obj\Debug\Achterbahn_MarkupCompile.cache
+C:\Users\armin\OneDrive\Dokumente\GitHub\4CHIF\POS - Wolfgang Schermann\Achterbahn\Achterbahn\obj\Debug\Achterbahn_MarkupCompile.lref

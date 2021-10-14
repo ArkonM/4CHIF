@@ -4,3 +4,6 @@ C:\Users\armin\source\repos\ThreadedPrimzahlen\ThreadedPrimzahlen\bin\Debug\Thre
 C:\Users\armin\source\repos\ThreadedPrimzahlen\ThreadedPrimzahlen\obj\Debug\ThreadedPrimzahlen.csprojAssemblyReference.cache
 C:\Users\armin\source\repos\ThreadedPrimzahlen\ThreadedPrimzahlen\obj\Debug\ThreadedPrimzahlen.exe
 C:\Users\armin\source\repos\ThreadedPrimzahlen\ThreadedPrimzahlen\obj\Debug\ThreadedPrimzahlen.pdb
+C:\Users\armin\OneDrive\Dokumente\GitHub\4CHIF\POS - Wolfgang Schermann\ThreadedPrimzahlen\ThreadedPrimzahlen\obj\Debug\ThreadedPrimzahlen.csprojAssemblyReference.cache
+C:\Users\armin\OneDrive\Dokumente\GitHub\4CHIF\POS - Wolfgang Schermann\ThreadedPrimzahlen\ThreadedPrimzahlen\obj\Debug\ThreadedPrimzahlen.exe
+C:\Users\armin\OneDrive\Dokumente\GitHub\4CHIF\POS - Wolfgang Schermann\ThreadedPrimzahlen\ThreadedPrimzahlen\obj\Debug\ThreadedPrimzahlen.pdb

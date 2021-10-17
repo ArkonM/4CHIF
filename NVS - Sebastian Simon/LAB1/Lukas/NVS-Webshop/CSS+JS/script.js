@@ -6,10 +6,10 @@ sessionStorage.setItem("productList", JSON.stringify(productList));
 for (let i=0; i<carts.length; i++) {
 
     carts[i].addEventListener('click', () => {
-        
+
         cartNumbers(carts[i].id);
         console.log(carts[i].id)
-        
+
 
     })
 }
@@ -29,7 +29,7 @@ function cartNumbers(id) {
 
     //Add Product to Warenkorb
     addItem(id);
-    
+
 }
 
 function addItem(id) {
@@ -40,7 +40,7 @@ function addItem(id) {
         if (productList[i].productID == id && productList[i].value >= 1) {
             productList[i].value += 1;
             gefunden = true;
-        } 
+        }
     }
     }
 
@@ -51,9 +51,9 @@ function addItem(id) {
         }
         productList.push(product);
     }
-        
-        
-    
+
+
+
     sessionStorage.setItem("productList", JSON.stringify(productList));
 
 }
@@ -70,11 +70,11 @@ function allowDrop(ev) {
   function drag(ev) {
     tempID = ev;
   }
-  
+
   function drop(ev) {
     cartNumbers(tempID)
   }
 
-  
+
 
 updateCartAmount();

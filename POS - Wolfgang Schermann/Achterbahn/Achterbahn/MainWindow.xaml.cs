@@ -42,7 +42,7 @@ namespace Achterbahn
 
             for (int i = 0; i < besucher; i++)
             {
-
+                CreateThread();
             }
         }
 
@@ -51,17 +51,38 @@ namespace Achterbahn
 
         }
 
-        Thread CreateThread()
+        void CreateThread()
         {
             ThreadStart worker = new ThreadStart(achterbahn);
             Thread t = new Thread(worker);
-            return t;
+            t.Start();
         }
 
 
         private void achterbahn()
         {
+            while (true)
+            {
+
+                if (fahrtende)
+                {
+                    return;
+                }
+                lock(faehrt)
+                {
+                    if (fahrtende)
+                    {
+                        return; //lock reset
+                    }
+                    Monitor.wait(ende);
+                    //achterbahn fährt bei x personen und fährt y lang (Monitor.PulseAll(ende);)
+
+                }
+                sleep(750);
+
+            }
 
         }
+
     }
 }

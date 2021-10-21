@@ -19,8 +19,6 @@ use Catalog;
 go
 
 
-
-
 drop table if exists SupplierParts;
 drop table if exists Suppliers;
 drop table if exists Parts;

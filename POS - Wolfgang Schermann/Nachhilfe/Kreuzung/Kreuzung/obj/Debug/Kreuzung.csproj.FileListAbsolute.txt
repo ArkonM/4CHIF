@@ -1,0 +1,13 @@
+C:\Users\Wolfgang Schermann\source\repos\Kreuzung\Kreuzung\bin\Debug\Kreuzung.exe.config
+C:\Users\Wolfgang Schermann\source\repos\Kreuzung\Kreuzung\bin\Debug\Kreuzung.exe
+C:\Users\Wolfgang Schermann\source\repos\Kreuzung\Kreuzung\bin\Debug\Kreuzung.pdb
+C:\Users\Wolfgang Schermann\source\repos\Kreuzung\Kreuzung\obj\Debug\Kreuzung.csproj.AssemblyReference.cache
+C:\Users\Wolfgang Schermann\source\repos\Kreuzung\Kreuzung\obj\Debug\Kreuzung.csproj.CoreCompileInputs.cache
+C:\Users\Wolfgang Schermann\source\repos\Kreuzung\Kreuzung\obj\Debug\Kreuzung.exe
+C:\Users\Wolfgang Schermann\source\repos\Kreuzung\Kreuzung\obj\Debug\Kreuzung.pdb
+C:\Users\armin\OneDrive\Dokumente\GitHub\4CHIF\POS - Wolfgang Schermann\Nachhilfe\Kreuzung\Kreuzung\bin\Debug\Kreuzung.exe.config
+C:\Users\armin\OneDrive\Dokumente\GitHub\4CHIF\POS - Wolfgang Schermann\Nachhilfe\Kreuzung\Kreuzung\bin\Debug\Kreuzung.exe
+C:\Users\armin\OneDrive\Dokumente\GitHub\4CHIF\POS - Wolfgang Schermann\Nachhilfe\Kreuzung\Kreuzung\bin\Debug\Kreuzung.pdb
+C:\Users\armin\OneDrive\Dokumente\GitHub\4CHIF\POS - Wolfgang Schermann\Nachhilfe\Kreuzung\Kreuzung\obj\Debug\Kreuzung.csprojAssemblyReference.cache
+C:\Users\armin\OneDrive\Dokumente\GitHub\4CHIF\POS - Wolfgang Schermann\Nachhilfe\Kreuzung\Kreuzung\obj\Debug\Kreuzung.exe
+C:\Users\armin\OneDrive\Dokumente\GitHub\4CHIF\POS - Wolfgang Schermann\Nachhilfe\Kreuzung\Kreuzung\obj\Debug\Kreuzung.pdb

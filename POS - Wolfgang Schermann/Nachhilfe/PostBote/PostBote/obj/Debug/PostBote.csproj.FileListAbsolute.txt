@@ -4,3 +4,10 @@ C:\Users\armin\OneDrive\Dokumente\GitHub\4CHIF\POS - Wolfgang Schermann\Nachhilf
 C:\Users\armin\OneDrive\Dokumente\GitHub\4CHIF\POS - Wolfgang Schermann\Nachhilfe\PostBote\PostBote\obj\Debug\PostBote.csprojAssemblyReference.cache
 C:\Users\armin\OneDrive\Dokumente\GitHub\4CHIF\POS - Wolfgang Schermann\Nachhilfe\PostBote\PostBote\obj\Debug\PostBote.exe
 C:\Users\armin\OneDrive\Dokumente\GitHub\4CHIF\POS - Wolfgang Schermann\Nachhilfe\PostBote\PostBote\obj\Debug\PostBote.pdb
+C:\Users\armin\Documents\GitHub\4CHIF\POS - Wolfgang Schermann\Nachhilfe\PostBote\PostBote\bin\Debug\PostBote.exe.config
+C:\Users\armin\Documents\GitHub\4CHIF\POS - Wolfgang Schermann\Nachhilfe\PostBote\PostBote\bin\Debug\PostBote.exe
+C:\Users\armin\Documents\GitHub\4CHIF\POS - Wolfgang Schermann\Nachhilfe\PostBote\PostBote\bin\Debug\PostBote.pdb
+C:\Users\armin\Documents\GitHub\4CHIF\POS - Wolfgang Schermann\Nachhilfe\PostBote\PostBote\obj\Debug\PostBote.csprojAssemblyReference.cache
+C:\Users\armin\Documents\GitHub\4CHIF\POS - Wolfgang Schermann\Nachhilfe\PostBote\PostBote\obj\Debug\PostBote.csproj.CoreCompileInputs.cache
+C:\Users\armin\Documents\GitHub\4CHIF\POS - Wolfgang Schermann\Nachhilfe\PostBote\PostBote\obj\Debug\PostBote.exe
+C:\Users\armin\Documents\GitHub\4CHIF\POS - Wolfgang Schermann\Nachhilfe\PostBote\PostBote\obj\Debug\PostBote.pdb

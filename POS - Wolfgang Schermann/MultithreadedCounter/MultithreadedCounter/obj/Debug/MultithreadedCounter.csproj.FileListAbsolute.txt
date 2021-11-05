@@ -1,7 +1,0 @@
-C:\Users\elvin\source\repos\MultithreadedCounter\MultithreadedCounter\obj\Debug\MultithreadedCounter.csproj.AssemblyReference.cache
-C:\Users\elvin\source\repos\MultithreadedCounter\MultithreadedCounter\obj\Debug\MultithreadedCounter.csproj.CoreCompileInputs.cache
-C:\Users\elvin\source\repos\MultithreadedCounter\MultithreadedCounter\bin\Debug\MultithreadedCounter.exe.config
-C:\Users\elvin\source\repos\MultithreadedCounter\MultithreadedCounter\bin\Debug\MultithreadedCounter.exe
-C:\Users\elvin\source\repos\MultithreadedCounter\MultithreadedCounter\bin\Debug\MultithreadedCounter.pdb
-C:\Users\elvin\source\repos\MultithreadedCounter\MultithreadedCounter\obj\Debug\MultithreadedCounter.exe
-C:\Users\elvin\source\repos\MultithreadedCounter\MultithreadedCounter\obj\Debug\MultithreadedCounter.pdb

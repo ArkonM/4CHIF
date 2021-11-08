@@ -9,12 +9,14 @@ namespace Flughafen
     {
         public int id;
         MediumAirport air;
+        public bool startet;
         Random r;
 
-        public Plane(int id, MediumAirport air)
+        public Plane(int id, MediumAirport air, bool startet)
         {
             this.id = id;
             this.air = air;
+            this.startet = startet;
             r = new Random();
         }
 

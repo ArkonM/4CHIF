@@ -29,5 +29,31 @@ namespace Flughafen
                 Thread.Sleep(2000);
             }
         }
+
+
+
+        public void StartLandCycle()
+        {
+            Thread t = new Thread(StartLand);
+            t.IsBackground = true;
+            t.Start();
+        }
+
+        public void StartLand()
+        {
+            while (true)
+            {
+                if(MediumAirport.Anzahl == 0) {
+                    MediumAirport.Ld.Reset();
+                    MediumAirport.St.Set();
+                }
+                else if (MediumAirport.Anzahl == 4)
+                {
+                    MediumAirport.St.Reset();
+                    MediumAirport.Ld.Set();
+                }
+                if(MediumAirport.Anzahl == 9) { MediumAirport.Anzahl = 0; }
+            }
+        }
     }
 }

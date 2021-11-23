@@ -26,6 +26,7 @@ namespace Sorting
         int _checks = 0;
         int _swaps = 0;
         int _selected = -1;
+        bool reseted = false;
 
         public ObservableCollection<Int32> List
         {
@@ -79,7 +80,15 @@ namespace Sorting
 
         public MainWindow()
         {
-            InitializeComponent();;
+            InitializeComponent();
+            sortList.Clear();
+            for (int i = 0; i < 50; i++)
+            {
+                sortList.Add(rand.Next(200));
+            }
+                        Checks = 0;
+            Swaps = 0;
+            this.DataContext = this;
         }
 
         private void start_Click(object sender, RoutedEventArgs e)
@@ -124,49 +133,7 @@ namespace Sorting
             });
         }
 
-        private void reverse_Click(object sender, RoutedEventArgs e)
-        {
-            int size = sortList.Count;
-            Checks = 0;
-            Swaps = 0;
-            ThreadPool.QueueUserWorkItem(o =>
-            {
-                bool swapped = false;
-                do
-                {
-                    swapped = false;
-                    for (int i = 0; i < size - 1; ++i, Selected = i)
-                    {
-                        try
-                        {
-                            this.Dispatcher.Invoke(
-                              System.Windows.Threading.DispatcherPriority.Normal
-                              , new System.Windows.Threading.DispatcherOperationCallback(delegate
-                              {
-                                  Checks++;
-                                  if (sortList[i] < sortList[i + 1])
-                                  {
-                                      Swaps++;
-                                      int temp = sortList[i];
-                                      sortList[i] = sortList[i + 1];
-                                      sortList[i + 1] = temp;
-                                      swapped = true;
-                                  }
-                                  return null;
-                              }), null);
-                        }
-                        catch (Exception ex)
-                        {
-                            System.Diagnostics.Debug.WriteLine(ex.ToString());
-                        }
-                        Thread.Sleep(50);
-                    }
-                    size = size - 1;
-                } while (swapped == true);
-
-            });
-        }
-
+        
         #region INotifyPropertyChanged Member
 
         public event PropertyChangedEventHandler PropertyChanged;

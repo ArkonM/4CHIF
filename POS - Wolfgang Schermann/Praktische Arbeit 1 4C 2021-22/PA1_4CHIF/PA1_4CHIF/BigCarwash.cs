@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace PA1_4CHIF
 {
-    class BigCarwash : Carwash    //Aufgabe 4
+    /*class BigCarwash : Carwash    //Aufgabe 4
     {
 
         public AutoResetEvent[] street = new AutoResetEvent[3];
@@ -28,9 +28,9 @@ namespace PA1_4CHIF
             Console.WriteLine("Auto " + c.id + " ist jetzt sauber und " + (i + 1) + " ist wieder frei", 1);
             street[i].Set();
         }
-    }
+    }*/
 
-    /*class BigCarwash : Carwash    //Aufgabe 7
+    class BigCarwash : Carwash    //Aufgabe 7
     {
 
         public AutoResetEvent[] street;
@@ -68,13 +68,10 @@ namespace PA1_4CHIF
             {
                 if (i > (street.Length * 3))
                 {
-                    street = new AutoResetEvent[street.Length + 1];
-                    for (int y = 0; y < street.Length-2; y++)
-                    {
-                        street[i] = new AutoResetEvent(true);
-                    }
-                }
+                    street.Append(new AutoResetEvent(true));
+                    Console.WriteLine("Waschstraße " + street.Length + " wurde eröffnet; " + (i) + " wartende.", 1);
+                } 
             }
         }
-    }*/
+    }
 }

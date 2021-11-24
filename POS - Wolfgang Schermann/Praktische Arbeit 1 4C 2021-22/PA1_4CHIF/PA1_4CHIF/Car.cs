@@ -9,7 +9,7 @@ namespace PA1_4CHIF
 {
     class Car
     {
-        Random r = new Random();
+        static Random r = new Random();
         public int id { get; set; }
         public int rand { get; set; }
         public static Carwash wash { get; set; }

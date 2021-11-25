@@ -22,11 +22,10 @@ namespace Sorting
     /// </summary>
     public partial class MainWindow : Window, INotifyPropertyChanged
     {
-        ObservableCollection<Int32> sortList = new ObservableCollection<Int32>();
+       ObservableCollection<Int32> sortList = new ObservableCollection<Int32>();
         int _checks = 0;
         int _swaps = 0;
         int _selected = -1;
-        bool reseted = false;
 
         public ObservableCollection<Int32> List
         {
@@ -86,20 +85,31 @@ namespace Sorting
             {
                 sortList.Add(rand.Next(200));
             }
-                        Checks = 0;
+            Checks = 0;
             Swaps = 0;
             this.DataContext = this;
         }
 
-        private void start_Click(object sender, RoutedEventArgs e)
+        private void Reset_Click(object sender, RoutedEventArgs e)
         {
-            int size = sortList.Count;
+            sortList.Clear();
+            for (int i = 0; i < 50; i++)
+            {
+                sortList.Add(rand.Next(200));
+            }
             Checks = 0;
             Swaps = 0;
+            this.DataContext = this;
+        }
+
+
+        private void Bubble_Click(object sender, RoutedEventArgs e)
+        {
+            int size = sortList.Count;
             ThreadPool.QueueUserWorkItem(o =>
             {
                 bool swapped = false;
-                do{
+                do {
                     swapped = false;
                     for (int i = 0; i < size - 1; ++i, Selected = i)
                     {
@@ -127,13 +137,13 @@ namespace Sorting
                         }
                         Thread.Sleep(50);
                     }
-                    size = size-1;
-              } while (swapped == true);
+                    size = size - 1;
+                } while (swapped == true);
 
             });
         }
 
-        
+
         #region INotifyPropertyChanged Member
 
         public event PropertyChangedEventHandler PropertyChanged;
@@ -151,16 +161,99 @@ namespace Sorting
         }
         #endregion
 
-        private void Reset_Click(object sender, RoutedEventArgs e)
+
+        private void Cocktail_Click(object sender, RoutedEventArgs e)
         {
-            sortList.Clear();
-            for (int i = 0; i < 50; i++)
+            bool swapped = true;
+            int start = 0;
+            int size = sortList.Count;
+
+            ThreadPool.QueueUserWorkItem(o =>
             {
-                sortList.Add(rand.Next(200));
-            }
-            Checks = 0;
-            Swaps = 0;
-            this.DataContext = this;
+                do
+                {
+
+                    // reset the swapped flag on entering the
+                    // loop, because it might be true from a
+                    // previous iteration.
+                    swapped = false;
+                    for (int i = start; i < size - 1; ++i, Selected = i)
+                    {
+                        try
+                        {
+                            this.Dispatcher.Invoke(
+                              System.Windows.Threading.DispatcherPriority.Normal
+                              , new System.Windows.Threading.DispatcherOperationCallback(delegate
+                              {
+                                  Checks++;
+                                  // loop from bottom to top same as
+                                  // the bubble sort
+
+                                  if (sortList[i] > sortList[i + 1])
+                                  {
+                                      int temp = sortList[i];
+                                      sortList[i] = sortList[i + 1];
+                                      sortList[i + 1] = temp;
+                                      swapped = true;
+                                  }
+                                  return null;
+                              }), null);
+                        }
+                        catch (Exception ex)
+                        {
+                            System.Diagnostics.Debug.WriteLine(ex.ToString());
+                        }
+                        Thread.Sleep(50);
+                    }
+                    // if nothing moved, then array is sorted.
+                    if (swapped == false)
+                        break;
+
+                    // otherwise, reset the swapped flag so that it
+                    // can be used in the next stage
+                    swapped = false;
+
+                    // move the end point back by one, because
+                    // item at the end is in its rightful spot
+                    size = size - 1;
+
+                    // from top to bottom, doing the
+                    // same comparison as in the previous stage
+                    for (int i = size - 1; i >= start; i--, Selected = (i+1))
+                    {
+                        try
+                        {
+                            this.Dispatcher.Invoke(
+                              System.Windows.Threading.DispatcherPriority.Normal
+                              , new System.Windows.Threading.DispatcherOperationCallback(delegate
+                              {
+                                  Checks++;
+                                  // loop from bottom to top same as
+                                  // the bubble sort
+
+                                  if (sortList[i] > sortList[i + 1])
+                                  {
+                                      int temp = sortList[i];
+                                      sortList[i] = sortList[i + 1];
+                                      sortList[i + 1] = temp;
+                                      swapped = true;
+                                  }
+                                  return null;
+                              }), null);
+                        }
+                        catch (Exception ex)
+                        {
+                            System.Diagnostics.Debug.WriteLine(ex.ToString());
+                        }
+                        Thread.Sleep(50);
+                    }
+
+                    // increase the starting point, because
+                    // the last stage would have moved the next
+                    // smallest number to its rightful spot.
+                    start = start + 1;
+                } while (swapped == true);
+            });
         }
     }
 }

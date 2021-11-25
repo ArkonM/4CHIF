@@ -6,8 +6,8 @@
         Title="Sorting-Algorithmen" Height="350" Width="800">
     <DockPanel>
         <StackPanel Width="100">
-            <Button Name="start" Margin="10" Click="start_Click">Sort</Button>
-            <Button Name="reverse" Margin="10 0 10 10">Reverse</Button>
+            <Button x:Name="Bubble" Margin="10" Click="Bubble_Click">Bubble Sort</Button>
+            <Button x:Name="cocktail" Margin="10 0 10 10" Click="Cocktail_Click">Cocktail Sort</Button>
             <TextBlock Margin="10 0 10 0">Checks:</TextBlock>
             <TextBlock Margin="20 0 0 10" Text="{Binding Path=Checks}"></TextBlock>
             <TextBlock Margin="10 0 10 0">Swaps:</TextBlock>

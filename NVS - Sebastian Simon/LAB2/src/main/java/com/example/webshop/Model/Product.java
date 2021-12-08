@@ -19,18 +19,6 @@ public class Product {
     private Date gueltigBis;
 
 
-    public Product() {
-    }
-
-    public Product(long id, String productName, String bildpfad, double preis, Date gueltigAb, Date gueltigBis) {
-        this.id = id;
-        this.productName = productName;
-        this.bildpfad = bildpfad;
-        this.preis = preis;
-        this.gueltigAb = gueltigAb;
-        this.gueltigBis = gueltigBis;
-    }
-
     public long getId() {
         return id;
     }

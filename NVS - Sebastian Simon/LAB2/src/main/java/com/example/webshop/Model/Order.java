@@ -46,25 +46,6 @@ public class Order {
         private boolean storniert;
 
 
-        public Order() {
-        }
-
-
-        public Order(long id, String andrede, String vorname, String name, String strasse, String plz, String ort, Date datum, Set<Product> products, double gesamtpreis, boolean done, boolean caceled) {
-                this.id = id;
-                this.andrede = andrede;
-                this.vorname = vorname;
-                this.name = name;
-                this.strasse = strasse;
-                this.plz = plz;
-                this.ort = ort;
-                this.datum = datum;
-                this.products = products;
-                this.gesamtpreis = gesamtpreis;
-                this.erledigt = erledigt;
-                this.storniert = storniert;
-        }
-
         public long getId() {
                 return id;
         }

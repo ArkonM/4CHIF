@@ -1,7 +1,7 @@
 package com.example.webshop.Controller;
 
 import com.example.webshop.Model.Product;
-import com.example.webshop.Repository.Product_Repository;
+import com.example.webshop.Repository.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -19,10 +19,10 @@ import java.util.List;
 
 
 
-public class Product_Controller {
+public class ProductController {
 
     @Autowired
-    Product_Repository product_rep;
+    ProductRepository product_rep;
 
     @GetMapping("/get")
     public ResponseEntity<List<Product>> getProducts(){

@@ -22,7 +22,7 @@ namespace Sorting
     /// </summary>
     public partial class MainWindow : Window, INotifyPropertyChanged
     {
-       ObservableCollection<Int32> sortList = new ObservableCollection<Int32>();
+        ObservableCollection<Int32> sortList = new ObservableCollection<Int32>();
         int _checks = 0;
         int _swaps = 0;
         int _selected = -1;
@@ -99,6 +99,7 @@ namespace Sorting
             }
             Checks = 0;
             Swaps = 0;
+            _selected = -1;
             this.DataContext = this;
         }
 
@@ -219,7 +220,7 @@ namespace Sorting
 
                     // from top to bottom, doing the
                     // same comparison as in the previous stage
-                    for (int i = size - 1; i >= start; i--, Selected = (i+1))
+                    for (int i = size - 1; i >= start; i--, Selected = (i + 1))
                     {
                         try
                         {
@@ -254,6 +255,89 @@ namespace Sorting
                     start = start + 1;
                 } while (swapped == true);
             });
+        }
+
+        private void Selection_Click(object sender, RoutedEventArgs e)
+        {
+            int i, j;
+            int aLength = sortList.Count(); // initialise to a's length
+
+            /* advance the position through the entire array */
+            /*   (could do i < aLength-1 because single element is also min element) */
+            for (i = 0; i < aLength - 1; i++)
+            {
+
+                /* find the min element in the unsorted sortList[i .. aLength-1] */
+
+                /* assume the min is the first element */
+                int jMin = i;
+                /* test against elements after i to find the smallest */
+                for (j = i + 1; j < aLength; j++, Selected = i)
+                {
+                    /* if this element is less, then it is the new minimum */
+                    if (sortList[j] < sortList[jMin])
+                    {
+                        /* found new minimum; remember its index */
+                        jMin = j;
+                    }
+                }
+
+                if (jMin != i)
+                {
+                    int temp = sortList[i];
+                    sortList[i] = sortList[jMin];
+                    sortList[jMin] = temp;
+                }
+            }
+        }
+    
+
+        private void Insertion_Click(object sender, RoutedEventArgs e)
+        {
+            int n = sortList.Count();
+            for (int i = 1; i < n; ++i)
+            {
+                int key = sortList[i];
+                int j = i - 1;
+
+                // Move elements of sortList[0..i-1],
+                // that are greater than key,
+                // to one position ahead of
+                // their current position
+                while (j >= 0 && sortList[j] > key)
+                {
+                    sortList[j + 1] = sortList[j];
+                    j = j - 1;
+                    
+                }
+                sortList[j + 1] = key;
+
+            }
+        }
+
+        private void Comb_Click(object sender, RoutedEventArgs e)
+        {
+            //https://exceptionnotfound.net/comb-sort-csharp-the-sorting-algorithm-family-reunion/
+        }
+
+        private void Shell_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Heap_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Merge_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Quick_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

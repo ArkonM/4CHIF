@@ -1,3 +1,4 @@
+drop table if exists Bytes;
 --s20170592
 --Aufgabe 2
 create table Bytes(

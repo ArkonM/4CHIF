@@ -6,7 +6,20 @@
     <Grid>
         <Canvas Height="287" HorizontalAlignment="Left" Margin="12,12,0,0" Name="canvas1" VerticalAlignment="Top" Width="479">
             <shapes:Basis X1="150" Y1="130" Stroke="Red" StrokeThickness="2.0" Width="299" Height="196" />
-            <shapes:Rechteck X1="80" Y1="90" X2="110" Y2="140" Stroke="Blue" StrokeThickness="2.0" Fill="Aqua" />
+            <shapes:Rechteck x:Name="Recht" X1="80" Y1="90" X2="110" Y2="140" Stroke="Blue" StrokeThickness="2.0" Fill="Aqua">
+                <shapes:Rechteck.RenderTransform>
+                    <RotateTransform Angle="0" CenterX="100" CenterY="100" />
+                </shapes:Rechteck.RenderTransform>
+            </shapes:Rechteck>
+            <Button x:Name="Start" Content="Start" Canvas.Left="10" Canvas.Top="146" Width="75" Click="Start_Click"/>
+            <Button x:Name="Stop" Content="Stop" Canvas.Left="98" Canvas.Top="146" Width="75" Click="Stop_Click"/>
         </Canvas>
+
     </Grid>
+
+    <Window.Resources>
+        <Storyboard x:Key="loadingRotation">
+            <DoubleAnimation Storyboard.TargetName="Recht" Storyboard.TargetProperty="(Image.RenderTransform).(RotateTransform.Angle)" From="0" To="360" Duration="0:0:2.0" RepeatBehavior="Forever" />
+        </Storyboard>
+    </Window.Resources>
 </Window>

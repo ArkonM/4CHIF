@@ -6,20 +6,39 @@
     <Grid>
         <Canvas Height="287" HorizontalAlignment="Left" Margin="12,12,0,0" Name="canvas1" VerticalAlignment="Top" Width="479">
             <shapes:Basis X1="150" Y1="130" Stroke="Red" StrokeThickness="2.0" Width="299" Height="196" />
-            <shapes:Rechteck x:Name="Recht" X1="80" Y1="90" X2="110" Y2="140" Stroke="Blue" StrokeThickness="2.0" Fill="Aqua">
-                <shapes:Rechteck.RenderTransform>
-                    <RotateTransform Angle="0" CenterX="100" CenterY="100" />
-                </shapes:Rechteck.RenderTransform>
-            </shapes:Rechteck>
-            <Button x:Name="Start" Content="Start" Canvas.Left="10" Canvas.Top="146" Width="75" Click="Start_Click"/>
-            <Button x:Name="Stop" Content="Stop" Canvas.Left="98" Canvas.Top="146" Width="75" Click="Stop_Click"/>
+            <shapes:Rechteck X1="80" Y1="90" X2="110" Y2="140" Stroke="Blue" StrokeThickness="2.0" Fill="Aqua" />
+            <shapes:Quadrat X1="200" Y1="90" Length="30" Stroke="Blue" StrokeThickness="2.0" Fill="Aqua" />
+            <shapes:Kreis X1="280" Y1="125" Radius="25" Stroke="Blue" StrokeThickness="2.0" Fill="Aqua" />
+            <shapes:Trapez X1="150" Y1="200" A="40" B="40" C="20" AStart="130" Stroke="Blue" StrokeThickness="2.0" Fill="Aqua" />
+            <shapes:Parallelogramm x:Name="Parallelogramm" X1="250" Y1="200" A="45" B="30" X2="230" Stroke="Blue" StrokeThickness="2.0" Fill="Aqua">
+                <shapes:Parallelogramm.RenderTransform>
+                    <RotateTransform Angle="0" CenterX="270" CenterY="215" />
+                </shapes:Parallelogramm.RenderTransform>
+            </shapes:Parallelogramm>
+            <shapes:Dreieck x:Name="Dreieck" X1="350" Y1="200" Length="45" X2="300" Stroke="Blue" StrokeThickness="2.0" Fill="Aqua">
+                <shapes:Dreieck.RenderTransform>
+                    <RotateTransform Angle="0" CenterX="350" CenterY="225" />
+                </shapes:Dreieck.RenderTransform>
+            </shapes:Dreieck>
+                <shapes:Ellipse X1="360" Y1="115" RadiusHeight="25" RadiusWidth="15" Stroke="Blue" StrokeThickness="2.0" Fill="Aqua" />
+            <shapes:Sechseck X1="60" Y1="180" Length="40" Stroke="Blue" StrokeThickness="2.0" Fill="Aqua" />
+            <shapes:Raute X1="100" Y1="30" Length="20" Stroke="Blue" StrokeThickness="2.0" Fill="Aqua" />
+            <shapes:Stern X1="430" Y1="150" Length="20" Angle="60" Stroke="Blue" StrokeThickness="2.0" Fill="Aqua" />
+            <shapes:Polygon X1="280" Y1="40" Length="25" Edges="8" Stroke="Blue" StrokeThickness="2.0" Fill="Aqua" />
+            <shapes:SternV2 X1="430" Y1="80" X2="20" Zackenanzahl="5" Stroke="Blue" StrokeThickness="2.0" Fill="Aqua" />
+            <shapes:Spirale x:Name="Spirale" X1="80" Y1="80" Umdrehung="3" Steigung="20" Stroke="Blue" StrokeThickness="5" Canvas.Left="130" Canvas.Top="79" Height="110" Width="119" >
+                <shapes:Spirale.RenderTransform>
+                    <RotateTransform Angle="0" CenterX="80" CenterY="80" />
+                </shapes:Spirale.RenderTransform>
+            </shapes:Spirale>
+            <Button x:Name="Rotate" Content="Rotate" Canvas.Left="10" Canvas.Top="10" Width="76" Click="Rotate_Click"/>
         </Canvas>
-
     </Grid>
-
     <Window.Resources>
         <Storyboard x:Key="loadingRotation">
-            <DoubleAnimation Storyboard.TargetName="Recht" Storyboard.TargetProperty="(Image.RenderTransform).(RotateTransform.Angle)" From="0" To="360" Duration="0:0:2.0" RepeatBehavior="Forever" />
+            <DoubleAnimation Storyboard.TargetName="Spirale" Storyboard.TargetProperty="(Image.RenderTransform).(RotateTransform.Angle)" From="0" To="-360" Duration="0:0:2" RepeatBehavior="Forever" />
+            <DoubleAnimation Storyboard.TargetName="Dreieck" Storyboard.TargetProperty="(Image.RenderTransform).(RotateTransform.Angle)" From="0" To="-360" Duration="0:0:2" RepeatBehavior="Forever" />
+            <DoubleAnimation Storyboard.TargetName="Parallelogramm" Storyboard.TargetProperty="(Image.RenderTransform).(RotateTransform.Angle)" From="0" To="-360" Duration="0:0:2" RepeatBehavior="Forever" />
         </Storyboard>
     </Window.Resources>
 </Window>

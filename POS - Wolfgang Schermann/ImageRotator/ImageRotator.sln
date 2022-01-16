@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31624.102
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageRotator", "ImageRotator\ImageRotator.csproj", "{E4BCC750-F7A9-4197-8317-628547EFC54F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E4BCC750-F7A9-4197-8317-628547EFC54F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E4BCC750-F7A9-4197-8317-628547EFC54F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E4BCC750-F7A9-4197-8317-628547EFC54F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E4BCC750-F7A9-4197-8317-628547EFC54F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {389A05F4-7EC6-457D-86DB-A3DC663386BF}
+	EndGlobalSection
+EndGlobal

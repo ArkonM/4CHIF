@@ -59,8 +59,16 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Basis.cs" />
-    <Compile Include="Quadrat.cs" />
+    <Compile Include="Dreieck.cs" />
+    <Compile Include="Ellipse.cs" />
+    <Compile Include="Parallelogramm.cs" />
+    <Compile Include="Polygon.cs" />
+    <Compile Include="Raute.cs" />
+    <Compile Include="Sechseck.cs" />
+    <Compile Include="Spirale.cs" />
     <Compile Include="Stern.cs" />
+    <Compile Include="SternV2.cs" />
+    <Compile Include="Trapez.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -69,6 +77,8 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Kreis.cs" />
+    <Compile Include="Quadrat.cs" />
     <Compile Include="Rechteck.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>

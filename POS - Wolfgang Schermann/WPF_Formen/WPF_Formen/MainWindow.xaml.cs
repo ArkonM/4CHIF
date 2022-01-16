@@ -20,23 +20,16 @@ namespace WPF_Formen
     /// </summary>
     public partial class MainWindow : Window
     {
-        Storyboard r;
-
         public MainWindow()
         {
             InitializeComponent();
+
         }
 
-        private void Start_Click(object sender, RoutedEventArgs e)
+        private void Rotate_Click(object sender, RoutedEventArgs e)
         {
-            r = (Storyboard)FindResource("loadingRotation");
+            Storyboard r = (Storyboard)FindResource("loadingRotation");
             r.Begin(this, true);
-        }
-
-        private void Stop_Click(object sender, RoutedEventArgs e)
-        {
-            r = (Storyboard)FindResource("loadingRotation");
-            r.Stop(this);
         }
     }
 }

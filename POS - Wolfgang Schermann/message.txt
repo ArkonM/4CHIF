@@ -1,0 +1,93 @@
+Ganz gut zu wissen, für die POS PA...
+
+Dialog, für Dateisuche:
+            System.Windows.Forms muss bei verweise hinzugefügt werden.
+
+            FolderBrowserDialog dialog = new FolderBrowserDialog();
+            dialog.ShowDialog();
+            path = dialog.SelectedPath;
+            //ZielOrdnerLabel.Content = path; <- Path is a String
+            
+Shape Rotieren:
+    <shapes:Raute X1="100" Y1="30" x:Name="route" Length="20" Stroke="Blue" StrokeThickness="2.0" Fill="Aqua">
+                <shapes:Raute.RenderTransform>
+                    <RotateTransform Angle="0" CenterX="50" CenterY="50">
+
+                    </RotateTransform>
+                </shapes:Raute.RenderTransform>
+    </shapes:Raute>
+    
+Image Rotieren:
+    <Image Name="image1" Stretch="Fill" Width="124" Height="124" Source="Loading.png" Visibility="Hidden">
+            <Image.RenderTransform>
+                <RotateTransform Angle="0" CenterX="62" CenterY="62" />
+            </Image.RenderTransform>
+        </Image>
+        
+Rotieren:
+    <Window.Resources>
+        <Storyboard x:Key="loadingRotation">
+            <DoubleAnimation Storyboard.TargetName="image1" Storyboard.TargetProperty="(Image.RenderTransform).(RotateTransform.Angle)" From="0" To="360" Duration="0:0:2.0" RepeatBehavior="Forever" />
+        </Storyboard>
+    </Window.Resources>
+    
+Storyboard für Animationen:
+    Storyboard r;
+    r = (Storyboard)FindResource("loadingRotation"); //In Main Window
+    mit r.begin(this, true) //starten
+    mit r.stop(this) // stoppen
+    
+
+Thread Pool
+ThreadPool.QueueUserWorkItem(new WaitCallback(start));
+start funktion muss als Parameter ein object x haben
+
+Dispatcher, um auch in anderen threads gui ändern zu können:
+     try
+            {
+                this.Dispatcher.BeginInvoke(
+                  System.Windows.Threading.DispatcherPriority.Normal
+                  , new System.Windows.Threading.DispatcherOperationCallback(delegate
+                  {
+                      //Content
+
+                      return null;
+                  }), null);
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debug.WriteLine(ex.ToString());
+            }
+
+--Sounds abspielen
+    SoundPlayer sp = new SoundPlayer(@"c:\windows\media\tada.wav");
+    sp.Play();
+
+--Skalierbare GUI
+ <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <GroupBox Grid.Row="0" Grid.Column="0" BorderThickness="0">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Button x:Name="selectPathBTN" Content="Select Path" Grid.Column="0" Grid.Row="0" Margin="10" ></Button>
+                <Button x:Name="scanFilesBTN" Content="Scan Files" Grid.Column="0" Grid.Row="1" Margin="10"></Button>
+            </Grid>
+        </GroupBox>
+        
+    </Grid>

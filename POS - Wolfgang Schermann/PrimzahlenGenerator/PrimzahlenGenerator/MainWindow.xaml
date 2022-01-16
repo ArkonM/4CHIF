@@ -1,0 +1,25 @@
+﻿<Window x:Class="PrimzahlenGenerator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PrimzahlenGenerator"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="261.4" Width="273.2">
+    <Grid Margin="0,0,4.2,6">
+        <TextBox x:Name="EingabeBox" HorizontalAlignment="Left" Height="23" Margin="10,127,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="242"/>
+        <Button x:Name="SearchBut" Content="Search" HorizontalAlignment="Left" Margin="10,160,0,0" VerticalAlignment="Top" Width="242" Click="SearchBut_Click" Height="25"/>
+        <Image Name="image1" Stretch="Fill" Width="124" Height="124" Source="Spinner-1s-124px.png" Margin="52,-14,51.8,60.8" Visibility="Hidden">
+            <Image.RenderTransform>
+                <RotateTransform Angle="0" CenterX="62" CenterY="62" />
+            </Image.RenderTransform>
+        </Image>
+        <Label x:Name="solution" Content="Ergebnis: " HorizontalAlignment="Left" Margin="10,190,0,0" VerticalAlignment="Top" Width="242"/>
+    </Grid>
+
+    <Window.Resources>
+        <Storyboard x:Key="loadingRotation">
+            <DoubleAnimation Storyboard.TargetName="image1" Storyboard.TargetProperty="(Image.RenderTransform).(RotateTransform.Angle)" From="0" To="360" Duration="0:0:2.0" RepeatBehavior="Forever" />
+        </Storyboard>
+    </Window.Resources>
+</Window>

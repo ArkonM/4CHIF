@@ -1,7 +1,11 @@
-package com.example.webshop.Repository;
+package com.devglan.dao;
 
-import com.example.webshop.Model.Product;
+import com.devglan.model.Product;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
-public interface Product_Repository extends JpaRepository <Product, Long>{
+@Repository
+
+public interface ProductDao extends JpaRepository <Product, Long>{
+    Product findByProductName(String name);
 }

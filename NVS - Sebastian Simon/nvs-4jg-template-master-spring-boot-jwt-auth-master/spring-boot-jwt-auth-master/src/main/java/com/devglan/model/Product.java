@@ -1,4 +1,4 @@
-package com.example.webshop.Model;
+package com.devglan.model;
 
 import net.bytebuddy.dynamic.loading.InjectionClassLoader;
 

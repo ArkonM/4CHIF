@@ -1,9 +1,10 @@
-package com.example.webshop.Model;
+package com.devglan.model;
 
 import org.hibernate.annotations.Fetch;
 import org.springframework.lang.Nullable;
 
 import javax.persistence.*;
+import com.devglan.model.Product;
 import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;

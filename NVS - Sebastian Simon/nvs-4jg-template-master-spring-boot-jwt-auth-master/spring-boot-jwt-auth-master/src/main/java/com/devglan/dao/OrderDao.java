@@ -1,7 +1,11 @@
-package com.example.webshop.Repository;
+package com.devglan.dao;
 
-import com.example.webshop.Model.Order;
+import com.devglan.model.Order;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
-public interface Order_Repository extends JpaRepository<Order, Long> {
+@Repository
+
+public interface OrderDao extends JpaRepository<Order, Long> {
+    Order findByName(String name);
 }

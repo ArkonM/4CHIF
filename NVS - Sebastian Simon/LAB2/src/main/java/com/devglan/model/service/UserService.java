@@ -1,4 +1,4 @@
-package com.devglan.service;
+package com.devglan.model.service;
 
 import com.devglan.model.User;
 import com.devglan.model.UserDto;

@@ -1,10 +1,10 @@
-package com.devglan.service.impl;
+package com.devglan.model.service.impl;
 
 import com.devglan.dao.UserDao;
 import com.devglan.exception.UserAlredyExistsException;
 import com.devglan.model.User;
 import com.devglan.model.UserDto;
-import com.devglan.service.UserService;
+import com.devglan.model.service.UserService;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.BeanUtils;

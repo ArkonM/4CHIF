@@ -1,0 +1,46 @@
+s20170592
+Aufgabe 007
+
+----- Transactions
+
+-Transactions are not specifically relational, although the
+ original research was done in specifically relational context.
+ (by Eswaran, Gray, Lorie and Traiger)
+
+-A transaction is a logical unit of work,
+ wich means, either everything or nothing happens.
+
+-A transaction is executed by using the "BEGIN TRANSACTION" statement. 	(normally explicit)
+-It ends with either a: "ROLLBACK" -> unsuccessful termination		(normally explicit)
+		    or: "COMMIT"   -> successful termination		(might be implicit)
+
+-All database updates and reads must be done within a transaction.
+
+-The "COMMIT" statement updates the database with all the made changes and terminates the transaction.
+-The "ROLLBACK" statement rolls back the database to the state, where the transaction began.
+-If there is a failure within the transaction and neither a COMMIT,
+ nor a ROLLBACK is reached in the Programm,
+ the system will force an implicit ROLLBACK.
+
+
+---The ROLLBACK is possible due to:
+
+-The system maintaining a recovery log in persistent storage.
+-The "Write ahead log rule", wich means that log writes are done before database writes
+-The COMMIT, forcing the log records out to a persistent storage.
+-The ROLLBACK, using these log records to recover the prior state of the database
+
+
+
+---The ACID properties
+(Transactions are supposed to posess certain properties,these are called the "ACID" properties.)
+
+-Atomicity(    Logical unit of work   ): Transactions are all or nothing.
+-Consistency(Logical unit of integrity): Transactions transorm a consistent state of the database into another, 
+              				 without necessarily preserving consistency at all intermediate points.
+-Isolation(Logical unit of concurrency): Transactions are isolated from another, until they commit.
+-Durability( Logical unit of recovery ): Once a transaction commits, its updates survive in the database, even
+	      				 if there's a subsequent system crash.
+
+
+

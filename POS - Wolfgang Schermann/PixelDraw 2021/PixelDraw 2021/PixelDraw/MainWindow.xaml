@@ -3,8 +3,15 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="Drawing" Height="350" Width="411">
     <DockPanel>
-        <StackPanel DockPanel.Dock="Top" Orientation="Horizontal" Margin="5px">
+        <StackPanel x:Name="Shape" DockPanel.Dock="Top" Orientation="Horizontal" Margin="5px">
             <Button Content="Draw" Padding="5px" Name="button1" VerticalAlignment="Top" Click="button1_Click" />
+            <Button Content="Draw Shape" Width="75"/>
+            <ComboBox Name="colorSelect" Height="15px" Width="50">
+                <ComboBoxItem>
+                    <SolidColorBrush Color="{Binding}"></SolidColorBrush>
+                </ComboBoxItem>
+            </ComboBox>
+            
         </StackPanel>
         <Image Name="drawing" Stretch="Uniform"/>
         

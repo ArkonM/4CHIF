@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using System.Collections.Generic;
+using System.Windows;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 
@@ -24,6 +25,12 @@ namespace PixelDraw
             _stride = _wb.PixelWidth * _bytesPerPixel;
             _colorArray = ConvertColor(Colors.Black);
             drawing.Source = _wb;
+
+            List<Color> colors = new List<Color>();
+            colors.Add(Colors.Aqua);
+            colors.Add(Colors.Salmon);
+            colors.Add(Colors.Red);
+            colorSelect.ItemsSource = colors;
         }
 
         #region Hilfsfunktionen
@@ -92,7 +99,7 @@ namespace PixelDraw
             int p2 = y1 - y2;
             int xc = x1;
             int yc = y1;
-            int homo = p1 / p2;
+            float homo = p1 / p2;
             if (p1 < p2)
             {
                 int i = 1;

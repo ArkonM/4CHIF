@@ -30,6 +30,9 @@ namespace PixelDraw
             colors.Add(Colors.Aqua);
             colors.Add(Colors.Salmon);
             colors.Add(Colors.Red);
+            colors.Add(Colors.Salmon);
+            colors.Add(Colors.Orange);
+            colors.Add(Colors.Green);
             colorSelect.ItemsSource = colors;
         }
 

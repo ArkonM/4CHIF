@@ -1,0 +1,87 @@
+--s20170592
+--Übung 8
+--Disk2
+update DiskArray
+   set Disk2 = null
+;
+go
+
+update DiskArray
+   set Disk2 = Disk1^Disk3^ParityDisk
+;
+go
+
+select char(Disk2) "Disk2 Wiederhergestellt"
+  from DiskArray
+;
+go
+
+--Disk3
+update DiskArray
+   set Disk3 = null
+;
+go
+
+update DiskArray
+   set Disk3 = Disk1^Disk2^ParityDisk
+;
+go
+
+select char(Disk3) "Disk3 Wiederhergestellt"
+  from DiskArray
+;
+go
+
+--ParityDisk
+update DiskArray
+   set ParityDisk = null
+;
+go
+
+update DiskArray
+   set ParityDisk = Disk1^Disk2^Disk3
+;
+go
+
+select ParityDisk "ParityDisk Wiederhergestellt"
+  from DiskArray
+;
+Go
+
+
+
+
+
+
+
+
+
+Disk2 Wiederhergestellt
+-----------------------
+F
+i
+r
+m
+e
+n
+ 
+ 
+Disk3 Wiederhergestellt
+-----------------------
+D
+a
+t
+e
+n
+
+
+ParityDisk Wiederhergestellt
+----------------------------
+85
+97
+101
+96
+127
+39
+103
+101

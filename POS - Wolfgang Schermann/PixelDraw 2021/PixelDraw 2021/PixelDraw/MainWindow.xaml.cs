@@ -102,7 +102,7 @@ namespace PixelDraw
             int p2 = y1 - y2;
             int xc = x1;
             int yc = y1;
-            float homo = p1 / p2;
+            float test = p1 / p2;
             if (p1 < p2)
             {
                 int i = 1;
@@ -111,7 +111,7 @@ namespace PixelDraw
                     if (y2 < yc)
                     {
                         yc--;
-                        if (i == homo)
+                        if (i == test)
                         {
                             if(xc < x2)
                             {
@@ -125,7 +125,7 @@ namespace PixelDraw
                     } else
                     {
                         yc--;
-                        if (i == homo)
+                        if (i == test)
                         {
                             if (xc < x2)
                             {
@@ -146,7 +146,7 @@ namespace PixelDraw
                     if (x2 < xc)
                     {
                         xc--;
-                        if (i == homo)
+                        if (i == test)
                         {
                             if (yc < y2)
                             {
@@ -162,7 +162,7 @@ namespace PixelDraw
                     else
                     {
                         xc--;
-                        if (i == homo)
+                        if (i == test)
                         {
                             if (yc < y2)
                             {

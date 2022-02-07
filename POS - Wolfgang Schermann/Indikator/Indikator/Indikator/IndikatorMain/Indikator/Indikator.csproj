@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{77C74817-DC12-4F6F-9586-C8231D595E91}</ProjectGuid>
+    <ProjectGuid>{1E10D904-C6A6-4D56-B0C6-C31E70B75D98}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>WPF_Indicator</RootNamespace>
-    <AssemblyName>WPF Indicator</AssemblyName>
+    <RootNamespace>Indikator</RootNamespace>
+    <AssemblyName>Indikator</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -95,10 +95,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Gauge.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Zeiger.png" />
+    <ProjectReference Include="..\IndikatorCustom\IndikatorCustom.csproj">
+      <Project>{7bc94432-c70f-4475-bb04-2a4ed7bc6749}</Project>
+      <Name>IndikatorCustom</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

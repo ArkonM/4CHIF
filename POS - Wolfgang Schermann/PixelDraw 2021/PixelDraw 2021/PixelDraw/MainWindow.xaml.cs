@@ -94,6 +94,68 @@ namespace PixelDraw
             }
         }
 
+
+        private static byte[] _readArray = ConvertColor(Colors.Black);
+
+        private void setPixelThreaded(Color c, int x, int y)
+        {
+            try
+            {
+                _wb.Dispatcher.Invoke(
+                  System.Windows.Threading.DispatcherPriority.Normal
+                  , new System.Windows.Threading.DispatcherOperationCallback(delegate
+                  {
+                      if (x < _wb.PixelWidth && x > 0 && y < _wb.PixelHeight && y > 0)
+                      {
+                          _wb.WritePixels(new Int32Rect(x, y, 1, 1), ConvertColor(c), _stride, 0);
+                      }
+                      return null;
+                  }), null);
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debug.WriteLine(ex.ToString());
+            }
+
+        }
+
+        private Color getPixelThreaded(int x, int y)
+        {
+            Color res = Colors.Transparent;
+            try
+            {
+                _wb.Dispatcher.Invoke(
+                  System.Windows.Threading.DispatcherPriority.Normal
+                  , new System.Windows.Threading.DispatcherOperationCallback(delegate
+                  {
+                      if (x < _wb.PixelWidth && x > 0 && y < _wb.PixelHeight && y > 0)
+                      {
+                          _wb.CopyPixels(new Int32Rect(x, y, 1, 1), _readArray, _stride, 0);
+                          res = ConvertColor(_readArray);
+                      }
+                      return null;
+                  }), null);
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debug.WriteLine(ex.ToString());
+            }
+            return res;
+        }
+
+        private Color getPixel(int x, int y)
+        {
+            Color res = Colors.Transparent;
+            if (x < _wb.PixelWidth && x > 0 && y < _wb.PixelHeight && y > 0)
+            {
+                _wb.CopyPixels(new Int32Rect(x, y, 1, 1), _readArray, _stride, 0);
+                res = ConvertColor(_readArray);
+            }
+
+            return res;
+        }
+
+
         private void drawLine(int x1, int y1, int x2, int y2)
         {
             //hier euren Algorithmus implementieren

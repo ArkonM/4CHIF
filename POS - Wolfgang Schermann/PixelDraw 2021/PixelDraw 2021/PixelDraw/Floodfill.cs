@@ -7,7 +7,7 @@ using System.Windows.Media;
 
 namespace PixelDraw
 {
-    class Floodfill
+    class FloodFill
 	{
 		// Diese Methode gibt true zurück, wenn die beiden Farben gleich sind, sonst false
 		private static bool ColorMatch(Color replacementColor, Color targetColor)

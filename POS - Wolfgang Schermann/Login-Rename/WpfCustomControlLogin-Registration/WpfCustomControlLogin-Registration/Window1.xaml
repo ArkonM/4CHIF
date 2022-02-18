@@ -39,14 +39,17 @@
         <StackPanel Visibility="Visible" Margin="75,0,103.6,0" Height="432" VerticalAlignment="Top">
             <Label Content="Registrieren" FontSize="28"/>
             <Label Content="First Name:" FontSize="16"/>
-            <TextBox Height="23" TextWrapping="Wrap" Text="TextBox" Margin="0,0,-0.8,0" FontSize="16"/>
+            <TextBox x:Name="FirstName" Height="23" TextWrapping="Wrap" Text="TextBox" Margin="0,0,-0.8,0" FontSize="16"/>
             <Label Content="Last Name:" FontSize="16"/>
-            <TextBox Height="23" TextWrapping="Wrap" Text="TextBox" Margin="0,0,-0.8,0" FontSize="16"/>
+            <TextBox x:Name="LastName" Height="23" TextWrapping="Wrap" Text="TextBox" Margin="0,0,-0.8,0" FontSize="16"/>
             <Label Content="E-Mail:" FontSize="16"/>
-            <TextBox Height="23" TextWrapping="Wrap" Text="TextBox" Margin="0,0,-0.8,0" FontSize="16"/>
+            <TextBox x:Name="EMail" Height="23" TextWrapping="Wrap" Text="TextBox" Margin="0,0,-0.8,0" FontSize="16"/>
             <Label Content="Password:" FontSize="16"/>
+            <PasswordBox x:Name="Password" Height="23" Margin="0,0,-0.8,0" FontSize="16"/>
             <Label Content="Confirm Password:" FontSize="16"/>
+            <PasswordBox x:Name="PWConfirm" Height="23" Margin="0,0,-0.8,0" FontSize="16"/>
             <Label Content="Address:" FontSize="16"/>
+            <TextBox x:Name="Address" Height="23" TextWrapping="Wrap" Text="TextBox" Margin="0,0,-0.8,0" FontSize="16"/>
 
 
         </StackPanel>

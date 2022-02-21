@@ -1,0 +1,32 @@
+﻿<Window x:Class="PixelDraw.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Drawing" Height="350" Width="411">
+    <DockPanel>
+        <StackPanel DockPanel.Dock="Top" Orientation="Horizontal" Margin="5px">
+            <Button Content="Draw" Padding="5px" Name="button1" VerticalAlignment="Top" Click="button1_Click" />
+            <Button Content="Clear" Padding="5px" Margin="10,0,0,0" Name="button2" VerticalAlignment="Top" Click="button2_Click" />
+            <ComboBox Name="DrawBox" Margin="10,0,0,0">
+                <ComboBoxItem>Linie</ComboBoxItem>
+                <ComboBoxItem>Kreis</ComboBoxItem>
+                <ComboBoxItem>Kurve</ComboBoxItem>
+                <ComboBoxItem>Füllen</ComboBoxItem>
+                <ComboBoxItem>Dijkstra</ComboBoxItem>
+                <ComboBoxItem>A*</ComboBoxItem>
+            </ComboBox>
+            <ComboBox Name="ColorsComboBox" Margin="10,0,0,0" SelectionChanged="ColorsComboBox_SelectionChanged">
+                <ComboBox.ItemTemplate>
+                    <DataTemplate>
+                        <Grid Width="50" Height="15">
+                            <Grid.Background>
+                                <SolidColorBrush Color="{Binding}"></SolidColorBrush>
+                            </Grid.Background>
+                        </Grid>
+                    </DataTemplate>
+                </ComboBox.ItemTemplate>
+            </ComboBox>
+        </StackPanel>
+        <Image Name="drawing" Stretch="Uniform" MouseLeftButtonDown="drawing_MouseLeftButtonDown" MouseLeftButtonUp="drawing_MouseLeftButtonUp"/>
+        
+    </DockPanel>
+</Window>

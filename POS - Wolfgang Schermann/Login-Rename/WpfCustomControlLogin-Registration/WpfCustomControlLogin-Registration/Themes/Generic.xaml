@@ -9,9 +9,82 @@
                     <Border Background="{TemplateBinding Background}"
                             BorderBrush="{TemplateBinding BorderBrush}"
                             BorderThickness="{TemplateBinding BorderThickness}">
-                        
-                        
-                        
+
+                        <Grid Margin="3,24,-3.4,-18">
+                            <Grid x:Name="Login" Visibility="Visible" Margin="1,0,0,2">
+
+                                <Label Content="Login:" HorizontalAlignment="Left" Margin="50,10,0,0" VerticalAlignment="Top" FontSize="24" FontWeight="Bold"/>
+                                <Label Content="Note: Please login here to view the features of this site. If you are new on this site then&#xD;&#xA;please click on the Register-Button" HorizontalAlignment="Left" Margin="87,57,0,0" VerticalAlignment="Top" FontStyle="Italic"/>
+                                <Label Content="Email:" HorizontalAlignment="Left" Margin="120,134,0,0" VerticalAlignment="Top"/>
+                                <Label Content="Password" HorizontalAlignment="Left" Margin="102,179,0,0" VerticalAlignment="Top"/>
+                                <TextBox x:Name="LoginMail" HorizontalAlignment="Left" Height="23" Margin="209,137,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                                <PasswordBox x:Name="LoginPassw" HorizontalAlignment="Left" Height="23" Margin="209,182,0,0" VerticalAlignment="Top" Width="120"/>
+                                <Button x:Name="LoginBtn" Content="Login" HorizontalAlignment="Left" Margin="209,229,0,0" VerticalAlignment="Top" Width="120" Height="26" FontSize="16"/>
+
+                                <Button Margin="624,28,73.6,344.6" x:Name="PART_REGISTRATION" Content="Registration" Cursor="Hand">
+                                    <Button.Template>
+                                        <ControlTemplate TargetType="Button">
+                                            <TextBlock TextDecorations="Underline">
+                                                <ContentPresenter />
+                                            </TextBlock>
+                                        </ControlTemplate>
+                                    </Button.Template>
+                                    <Button.Style>
+                                        <Style TargetType="Button">
+                                            <Setter Property="Foreground" Value="Navy" />
+                                            <Style.Triggers>
+                                                <Trigger Property="IsMouseOver" Value="true">
+                                                    <Setter Property="Foreground" Value="Red" />
+                                                </Trigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </Button.Style>
+                                </Button>
+
+                            </Grid>
+                            <Grid x:Name="Registration" Visibility="Collapsed" Margin="1,-9,0,10">
+
+                                <Label Content="First Name:" HorizontalAlignment="Left" Margin="124,63,0,0" VerticalAlignment="Top" Width="85"/>
+                                <Label Content="Last Name:" HorizontalAlignment="Left" Margin="124,89,0,0" VerticalAlignment="Top" Width="85"/>
+                                <Label Content="E-Mail:" HorizontalAlignment="Left" Margin="124,115,0,0" VerticalAlignment="Top" Width="85"/>
+                                <Label Content="Password:" HorizontalAlignment="Left" Margin="124,141,0,0" VerticalAlignment="Top" Width="85"/>
+                                <Label Content="Confirm Password:" HorizontalAlignment="Left" Margin="124,167,0,0" VerticalAlignment="Top" Width="110"/>
+                                <Label Content="Adress:" HorizontalAlignment="Left" Margin="124,193,0,0" VerticalAlignment="Top" Width="110"/>
+                                <TextBox x:Name="FirstName" HorizontalAlignment="Left" Height="23" Margin="244,63,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="154"/>
+                                <TextBox x:Name="LastName" HorizontalAlignment="Left" Height="23" Margin="244,89,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="154"/>
+                                <TextBox x:Name="EMail" HorizontalAlignment="Left" Height="23" Margin="244,115,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="154"/>
+                                <PasswordBox x:Name="Password" HorizontalAlignment="Left" Height="23" Margin="244,141,0,0" VerticalAlignment="Top" Width="154"/>
+                                <PasswordBox x:Name="ConfirmPassword" HorizontalAlignment="Left" Height="23" Margin="244,167,0,0" VerticalAlignment="Top" Width="154"/>
+                                <TextBox x:Name="Adress" HorizontalAlignment="Left" Height="23" Margin="244,193,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="154"/>
+                                <Label Content="Registration:" HorizontalAlignment="Left" Margin="31,16,0,0" VerticalAlignment="Top" FontSize="24" FontWeight="Bold"/>
+
+                                <Button Content="Submit" HorizontalAlignment="Left" Margin="244,237,0,0" VerticalAlignment="Top" Width="49"/>
+                                <Button Content="Reset" HorizontalAlignment="Left" Margin="298,237,0,0" VerticalAlignment="Top" Width="40"/>
+                                <Button Content="Cancel" HorizontalAlignment="Left" Margin="343,237,0,0" VerticalAlignment="Top" Width="55"/>
+
+                                <Button Margin="624,34,103.6,346.6" x:Name="PART_LOGIN" Content="Login" Cursor="Hand">
+                                    <Button.Template>
+                                        <ControlTemplate TargetType="Button">
+                                            <TextBlock TextDecorations="Underline">
+                            <ContentPresenter />
+                                            </TextBlock>
+                                        </ControlTemplate>
+                                    </Button.Template>
+                                    <Button.Style>
+                                        <Style TargetType="Button">
+                                            <Setter Property="Foreground" Value="Navy" />
+                                            <Style.Triggers>
+                                                <Trigger Property="IsMouseOver" Value="true">
+                                                    <Setter Property="Foreground" Value="Red" />
+                                                </Trigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </Button.Style>
+                                </Button>
+
+                            </Grid>
+                        </Grid>
+
 
                     </Border>
                 </ControlTemplate>

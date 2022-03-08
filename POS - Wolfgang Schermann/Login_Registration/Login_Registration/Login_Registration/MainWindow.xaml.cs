@@ -10,16 +10,17 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace WpfCustomControlLogin_Registration
+namespace Login_Registration
 {
     /// <summary>
-    /// Interaction logic for Window1.xaml
+    /// Interaktionslogik für MainWindow.xaml
     /// </summary>
-    public partial class Window1 : Window
+    public partial class MainWindow : Window
     {
-        public Window1()
+        public MainWindow()
         {
             InitializeComponent();
         }

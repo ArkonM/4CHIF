@@ -49,8 +49,34 @@ namespace WpfCustomControlLogin_Registration
         static CustomControl1()
         {
             DefaultStyleKeyProperty.OverrideMetadata(typeof(CustomControl1), new FrameworkPropertyMetadata(typeof(CustomControl1)));
-            //EmailLoginBox = (TextBox)this.Template.FindName("PART_EMAILBOXLOG", this);
-            //LoginPanel = (StackPanel)this.Template.FindName("LoginPanel", this);
+        }
+
+
+        public override void OnApplyTemplate()
+        {
+            base.OnApplyTemplate();
+
+            var Login = Template.FindName("Login", this) as Grid;
+            var Regis = Template.FindName("Registration", this) as Grid;
+            var regisBtn = Template.FindName("PART_REGISTRATION", this) as Button;
+            var loginBtn = Template.FindName("PART_LOGIN", this) as Button;
+            if (regisBtn != null)
+            {
+                regisBtn.Click += (s, a) =>
+                {
+                    Login.Visibility = Visibility.Collapsed;
+                    Regis.Visibility = Visibility.Visible;
+                };
+            }
+            if (loginBtn != null)
+            {
+                loginBtn.Click += (s, a) =>
+                {
+
+                    Regis.Visibility = Visibility.Collapsed;
+                    Login.Visibility = Visibility.Visible;
+                };
+            }
         }
 
     }

@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{D83B0898-E561-4DC7-9E84-912CF1988D0E}</ProjectGuid>
+    <ProjectGuid>{D8E6E783-5D60-4688-B553-57C2B11D938E}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>WPF_MediaPlayer</RootNamespace>
-    <AssemblyName>WPF_MediaPlayer</AssemblyName>
+    <RootNamespace>WPF_8Queens_Problem</RootNamespace>
+    <AssemblyName>WPF_8Queens_Problem</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -37,7 +37,6 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -24,6 +25,7 @@ namespace WPF_MediaPlayer
 
         String URL;
         Boolean playing = false;
+        Boolean firstOne = true;
 
         List<String> playlist = new List<String>();
         int playingVideo = 0;
@@ -40,10 +42,12 @@ namespace WPF_MediaPlayer
                 playingVideo--;
                 video.Source = new Uri(playlist[playingVideo]);
                 video.Play();
+                StartStop.Content = "Pause";
             } else
             {
                 video.Pause();
                 playing = false;
+                StartStop.Content = "Continue";
             }
         }
 
@@ -54,10 +58,12 @@ namespace WPF_MediaPlayer
                 playingVideo++;
                 video.Source = new Uri(playlist[playingVideo]);
                 video.Play();
+                StartStop.Content = "Pause";
             } else
             {
-                video.Stop();
+                video.Pause();
                 playing = false;
+                StartStop.Content = "Continue";
             }
         }
 
@@ -67,10 +73,12 @@ namespace WPF_MediaPlayer
             {
                 video.Play();
                 playing = true;
+                StartStop.Content = "Pause";
             } else
             {
                 video.Pause();
                 playing = false;
+                StartStop.Content = "Continue";
             }
         }
 
@@ -79,8 +87,30 @@ namespace WPF_MediaPlayer
             OpenFileDialog dialog = new OpenFileDialog();
             dialog.ShowDialog();
             URL = dialog.InitialDirectory + dialog.FileName;
-            video.Source = new Uri(URL);
+            if (firstOne)
+            {
+                video.Source = new Uri(URL);
+                firstOne = false;
+                video.Play();
+                Thread.Sleep(10);
+                video.Pause();
+            }
             playlist.Add(URL);
+        }
+
+        private void ProgessBar_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+            video.Position = TimeSpan.FromSeconds(ProgessSlider.Value);
+        }
+
+        private void ProgressBar_Value()
+        {
+            /*
+            TimeSpan _position;
+            _position = video.NaturalDuration.TimeSpan;
+            ProgessSlider.Minimum = 0;
+            ProgessSlider.Maximum = _position.TotalSeconds;
+            */
         }
     }
 }

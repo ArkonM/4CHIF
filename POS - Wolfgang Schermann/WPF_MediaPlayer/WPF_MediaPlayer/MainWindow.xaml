@@ -11,15 +11,20 @@
             <DockPanel DockPanel.Dock="Top" Height="20" HorizontalAlignment="Left">
                 <Button x:Name="Open" Content="Open" Width="75" Click="Open_Click"/>
             </DockPanel>
+
             
 
             <DockPanel DockPanel.Dock="Bottom" Height="50" HorizontalAlignment="Center">
                 <Button x:Name="previous" Content="Vorheriges" Width="75" Click="previous_Click"/>
-                <Button x:Name="StartStop" Content="Pause" Width="75" Click="StartStop_Click"/>
+                <Button x:Name="StartStop" Content="Start" Width="75" Click="StartStop_Click"/>
                 <Button x:Name="next" Content="Nächstes" Width="75" Click="next_Click"/>
             </DockPanel>
 
-            <MediaElement Name="video" LoadedBehavior="Manual" />
+            <DockPanel DockPanel.Dock="Bottom" Height="20">
+                <Slider x:Name="ProgessSlider" Margin="20,0,20,0"  Height="10" VerticalAlignment="Top" ValueChanged="ProgessBar_ValueChanged" Maximum="100"/>
+            </DockPanel>
+
+            <MediaElement x:Name="video" LoadedBehavior="Manual" />
         </DockPanel>
     </Grid>
 </Window>

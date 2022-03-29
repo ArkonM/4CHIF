@@ -1,0 +1,33 @@
+Freifächer:
+Lehrer
+-10 Lehrer 10 Freifächer
+-Beschreibung des Fachs bis 1 -Monat vor Semesterbeginn im Sekretäriat abgeben
+
+Sekretäriat:
+Chefsekretäring
+-Bekommt alle Fächerbeschreibungen
+-Tippt diese ins Freifach-Buchungs-System
+
+Sekretäriatshilfe
+-2 Wochen vor Semseterbeginn Freifächer im FBS Freischalten
+-Brief an alle Schüler, dass Freifächer buchbar sind
+
+Freifächerauswahl:
+Schüler
+-Haben eine Woche Zeit sich 2 Fächer zu suchen
+
+Sekretäriat:
+Chefsekretäring
+-Sendet eine Liste an die Lehrer, welche schüler sich für ihr Freifach angemeldet haben
+
+Freifächer:
+Lehrer
+-Wenn sich zu viele Angemeldet
+-Entscheiden wer bei ihnen bleiben darf
+-im zweifelsfall haben Schüler im höheren Semester Vorrang
+-Liste der ausgeschiedenen Schüler mind. 3 Tage vor Schulbeginn an das Sekretäriat
+
+Sekretäriat:
+Chefsekretärin
+-weist dann den Schülern Freie Plätze aus anderen Kursen zu und bucht sie im FSB um
+-Message über umbuchung an den Schüler

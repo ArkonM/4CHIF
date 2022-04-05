@@ -35,7 +35,7 @@ namespace WPF_8Queens_Problem
             {
                 for (int i2 = 0; i2 < field.GetLength(1); i2++)
                 {
-                    Console.Write($"{field[i1, i2]} ");
+                    Console.Write($"{field[i1, i2]}");
                 }
                 Console.WriteLine();
             }
@@ -162,7 +162,7 @@ namespace WPF_8Queens_Problem
             UniGrid.MaxHeight = 800;
             UniGrid.MaxWidth = 800;
 
-            for (int i = 0; i < size; ++i)
+            for (int i = 0; i < size*size; ++i)
             {
                 Image l = new Image();
                 BitmapImage myImageSource = new BitmapImage();

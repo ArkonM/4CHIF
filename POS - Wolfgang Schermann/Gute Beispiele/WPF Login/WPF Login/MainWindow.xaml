@@ -1,0 +1,47 @@
+﻿<Window x:Class="WPF_Login.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF_Login"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <StackPanel Margin="10" VerticalAlignment="Center">
+            <StackPanel x:Name="PART_LOGINPANEL">
+                <UniformGrid Rows="1" Columns="2">
+                    <Label Content="Login:" FontSize="24" HorizontalAlignment="Center"/>
+                    <Button x:Name="PART_REGLINKBUTTON" Content="Register" Cursor="Hand">
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <TextBlock TextDecorations="Underline">
+                                     <ContentPresenter />
+                                </TextBlock>
+                            </ControlTemplate>
+                        </Button.Template>
+                        <Button.Style>
+                            <Style TargetType="Button">
+                                <Setter Property="Foreground" Value="Navy" />
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="true">
+                                        <Setter Property="Foreground" Value="Red" />
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Button.Style>
+                    </Button>
+                </UniformGrid>
+                <Label Content="Note: If you are new to this site, please click on the Register-Button" FontStyle="Italic" 
+                       HorizontalAlignment="Center"/>
+                <UniformGrid Rows="2" Columns="2" Margin="0,10,0,10">
+                    <Label Content="E-Mail" HorizontalAlignment="Center" Margin="150,0,0,10"/>
+                    <TextBox x:Name="PART_EMAILBOXLOGIN" Width="200" HorizontalAlignment="Left" Margin="0,0,0,10" />
+                    <Label Content="Password" HorizontalAlignment="Center"  Margin="150,0,0,10"/>
+                    <PasswordBox  x:Name="PART_PASSWORDBOXLOGIN" Width="200" HorizontalAlignment="Left" Margin="0,0,0,10"/>
+                </UniformGrid>
+                <TextBlock x:Name="PART_ERRORBLOCKLOGIN" FontWeight="Bold" Visibility="Collapsed"/>
+                <Button x:Name="PART_LOGINBUTTON" Content="Login" Width="100" Margin="0,0,60,0"/>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>

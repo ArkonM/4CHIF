@@ -1,0 +1,31 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF_Indicator"
+        xmlns:WPFIndicatorControl="clr-namespace:WPFIndicatorControl;assembly=WPFIndicatorControl" x:Class="WPF_Indicator.MainWindow"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <StackPanel VerticalAlignment="Center">
+            <WPFIndicatorControl:IndicatorControl HorizontalAlignment="Center" VerticalAlignment="Center"
+                                                  Minimum="{Binding ElementName=MinSlider, Path=Value}" 
+                                                  Maximum="{Binding ElementName=MaxSlider, Path=Value}"
+                                                  Value="{Binding ElementName=ValueSlider, Path=Value}"/>
+            <UniformGrid Columns="3" Rows="1">
+                <Slider x:Name="MinSlider" Minimum="0"
+                            Maximum="{Binding ElementName=MaxSlider, Path=Value}" Value="0"/>
+                <Slider x:Name="ValueSlider" Minimum="{Binding ElementName=MinSlider, Path=Value}" 
+                            Maximum="{Binding ElementName=MaxSlider, Path=Value}"/>
+                <Slider x:Name="MaxSlider" Minimum="{Binding ElementName=MinSlider, Path=Value}" 
+                            Maximum="100"/>
+            </UniformGrid>
+            <UniformGrid Columns="3" Rows="1">
+                <Label Content="Min" HorizontalAlignment="Center"/>
+                <Label Content="Value" HorizontalAlignment="Center"/>
+                <Label Content="Max" HorizontalAlignment="Center"/>
+            </UniformGrid>
+        </StackPanel>
+    </Grid>
+</Window>

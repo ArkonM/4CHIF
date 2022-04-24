@@ -52,6 +52,24 @@ values
 go
 
 
+--Aufgabe 7
+--s20170592
+insert into Filiale
+	(FilialNr, Straﬂe						, Ort			, PLZ		, Telefon         , SVNr		  )
+values
+	(	   4 , 'Altstadt 10'				, 'Linz'		, '4020'	, '0732 / 786 611', '2079221')
+;
+go
+
+
+--Aufgabe 8
+--s20170592
+insert into Filiale
+	(FilialNr, Straﬂe						, Ort			, PLZ		, Telefon         , SVNr		  )
+values
+	(	   4 , 'Altstadt 10'				, 'Linz'		, '4020'	, '0732 / 786 611', '2079980221')
+;
+go
 
 
 --Aufgabe 9

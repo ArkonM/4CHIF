@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<ProductList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ProductListCollection>
+    <Product>
+      <ProductGroup>spezifisches Produkt</ProductGroup>
+      <ProductName>Test</ProductName>
+      <Amount>6</Amount>
+    </Product>
+    <Product>
+      <ProductGroup>Fisch</ProductGroup>
+      <ProductName>Dorschfilet </ProductName>
+      <Amount>5</Amount>
+    </Product>
+    <Product>
+      <ProductGroup>Fisch</ProductGroup>
+      <ProductName>Ganze Kliesche mit Haut </ProductName>
+      <Amount>6</Amount>
+    </Product>
+  </ProductListCollection>
+</ProductList>

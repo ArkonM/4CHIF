@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31624.102
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPF Indicator", "WPF Indicator\WPF Indicator.csproj", "{C396ECD0-A7AB-4048-BF2C-A0B3A1776485}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPFIndicatorControl", "WPFIndicatorControl\WPFIndicatorControl.csproj", "{D534AAED-C8A7-4A0B-863E-DB065B713437}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C396ECD0-A7AB-4048-BF2C-A0B3A1776485}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C396ECD0-A7AB-4048-BF2C-A0B3A1776485}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C396ECD0-A7AB-4048-BF2C-A0B3A1776485}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C396ECD0-A7AB-4048-BF2C-A0B3A1776485}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D534AAED-C8A7-4A0B-863E-DB065B713437}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D534AAED-C8A7-4A0B-863E-DB065B713437}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D534AAED-C8A7-4A0B-863E-DB065B713437}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D534AAED-C8A7-4A0B-863E-DB065B713437}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3ECF4BA1-4577-4B6D-B943-BD9A76D99230}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,84 @@
+﻿<Window x:Class="WPF_WordPad.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF_WordPad"
+        xmlns:my="http://schemas.microsoft.com/winfx/2006/xaml/presentation/ribbon"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" Loaded="Window_Loaded">
+    <DockPanel>
+        <Ribbon x:Name="RibbonWin" DockPanel.Dock="Top" SelectedIndex="0">
+            <!-- Help Pane, located at the right-hand side -->
+            <Ribbon.HelpPaneContent>
+                <RibbonButton SmallImageSource="Images\clear.png" Click="RibbonButton_Click_Help"/>
+            </Ribbon.HelpPaneContent>
+            <Ribbon.QuickAccessToolBar>
+                <RibbonQuickAccessToolBar>
+                    <RibbonButton x:Name ="Save" SmallImageSource="Images\save.png" Click="RibbonApplicationMenuItem_Click_Save"/>
+                    <RibbonButton x:Name ="Undo" SmallImageSource="Images\Undo16.png" Command="ApplicationCommands.Undo"
+                                            CommandTarget="{Binding ElementName=RichTB}"/>
+                    <RibbonButton x:Name="Redo" SmallImageSource="Images\Redo16.png" Command="ApplicationCommands.Redo"
+                                            CommandTarget="{Binding ElementName=RichTB}"/>
+                </RibbonQuickAccessToolBar>
+            </Ribbon.QuickAccessToolBar>
+            <!-- Application Menu, located at the left-hand side (down arrow) -->
+            <Ribbon.ApplicationMenu>
+                <RibbonApplicationMenu KeyTip="F">
+                    <RibbonApplicationMenuItem Header="Save" ImageSource="Images\save.png" Click="RibbonApplicationMenuItem_Click_Save" />
+                    <RibbonApplicationMenuItem Header="Load" ImageSource="Images\load.jpg" Click="RibbonApplicationMenuItem_Click_Open" />
+                </RibbonApplicationMenu>
+            </Ribbon.ApplicationMenu>
+            <!-- Ribbon Tab #1: Home -->
+            <RibbonTab Header="Home" KeyTip="H" >
+                <!-- Home  group-->
+                <RibbonGroup x:Name="ClipboardGroup" Header="Edit">
+                    <RibbonButton LargeImageSource="Images\Paste32.png" Label="Paste" KeyTip="V" Command="ApplicationCommands.Paste"
+                                            CommandTarget="{Binding ElementName=RichTB}"/>
+                    <RibbonButton SmallImageSource="Images\Cut16.png" Label="Cut" KeyTip="X" Command="ApplicationCommands.Cut"
+                                            CommandTarget="{Binding ElementName=RichTB}"/>
+                    <RibbonButton SmallImageSource="Images\Copy16.png" Label="Copy" KeyTip="C" Command="ApplicationCommands.Copy"
+                                            CommandTarget="{Binding ElementName=RichTB}"/>
+                    <RibbonButton SmallImageSource="Images\Delete16.png" Label="Clear" KeyTip="L" Command="EditingCommands.Delete"
+                                            CommandTarget="{Binding ElementName=RichTB}"/>
+                    <RibbonButton Label="Select all" Command="ApplicationCommands.SelectAll"
+                                            CommandTarget="{Binding ElementName=RichTB}"/>
+                </RibbonGroup>
+                <!-- Formatting -->
+                <RibbonGroup x:Name="FontGroup" Header="Font">
+                    <RibbonControlGroup>
+                        <ComboBox x:Name="_fontFamily" IsEditable="true" Width="80" SelectionChanged="_fontFamily_SelectionChanged"/>
+                        <ComboBox x:Name="_fontSize" IsEditable="true" Width="50" SelectionChanged="_fontSize_SelectionChanged"/>
+                    </RibbonControlGroup>
+                    <RibbonControlGroup>
+                        <RibbonToggleButton x:Name="_btnBold" SmallImageSource="Images\Bold16.png" Command="EditingCommands.ToggleBold"
+                                            CommandTarget="{Binding ElementName=RichTB}"/>
+                        <RibbonToggleButton x:Name="_btnItalic" SmallImageSource="Images\Italic16.png" Command="EditingCommands.ToggleItalic"
+                                            CommandTarget="{Binding ElementName=RichTB}"/>
+                        <RibbonToggleButton x:Name="_btnUnderline" SmallImageSource="Images\Underline16.png" Command="EditingCommands.ToggleUnderline"
+                                            CommandTarget="{Binding ElementName=RichTB}"/>
+                    </RibbonControlGroup>
+                </RibbonGroup>
+                <RibbonGroup x:Name="ParagraphGroup" Header="Paragraph">
+                    <RibbonControlGroup>
+                        <RibbonToggleButton x:Name="_btnAlignLeft" SmallImageSource="Images\LeftAlign16.png" Command="EditingCommands.AlignLeft"
+                                            CommandTarget="{Binding ElementName=RichTB}"/>
+                        <RibbonToggleButton x:Name="_btnAlignCenter" SmallImageSource="Images\CenterAlign16.png" Command="EditingCommands.AlignCenter"
+                                            CommandTarget="{Binding ElementName=RichTB}"/>
+                        <RibbonToggleButton x:Name="_btnAlignRight" SmallImageSource="Images\RightAlign16.png" Command="EditingCommands.AlignRight"
+                                            CommandTarget="{Binding ElementName=RichTB}" />
+                        <RibbonToggleButton x:Name="_btnAlignJustify" SmallImageSource="Images\JustifyAlign16.png" Command="EditingCommands.AlignJustify"
+                                            CommandTarget="{Binding ElementName=RichTB}" />
+                    </RibbonControlGroup>
+                    <RibbonControlGroup>
+                        <RibbonToggleButton x:Name="_btnBullets" SmallImageSource="Images\Bullets16.png" Command="EditingCommands.ToggleBullets"
+                                            CommandTarget="{Binding ElementName=RichTB}"/>
+                        <RibbonToggleButton x:Name="_btnNumbers" SmallImageSource="Images\Numbering16.png" Command="EditingCommands.ToggleNumbering"
+                                            CommandTarget="{Binding ElementName=RichTB}"/>
+                    </RibbonControlGroup>
+                </RibbonGroup>
+            </RibbonTab>
+        </Ribbon>
+        <RichTextBox x:Name="RichTB" SelectionChanged="RichTB_SelectionChanged"/>
+    </DockPanel>
+</Window>

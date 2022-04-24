@@ -80,3 +80,21 @@ go
 
 --Aufgabe 5
 --Nein, weil ich sonst nur ein einziges NULL Attribut haben dürfte, da die NULL's in SQL Server auch unique sein müssen
+
+--Aufgabe 7
+--Bei SQLite ja, bei SQL-Server nein, weil bei SQL-Server null öfters vorkommen darf
+
+
+--Aufgabe 8
+--s20170592
+create unique nonclustered index idx_FilialNr_uqnotnull
+    on Angestellter(FilialNr)
+ where FilialNr is not null;
+
+
+--Aufgabe 9
+--s20170592
+UPDATE Angestellter
+	set FilialNr = 1
+  where SVNr = '1073970812'
+;

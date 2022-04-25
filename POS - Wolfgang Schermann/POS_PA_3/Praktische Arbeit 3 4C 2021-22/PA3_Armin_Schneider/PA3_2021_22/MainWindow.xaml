@@ -1,0 +1,50 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PA3_2021_22"
+        xmlns:CountdownLibrary="clr-namespace:CountdownLibrary;assembly=CountdownLibrary" x:Class="PA3_2021_22.MainWindow"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+
+    <Window.CommandBindings>
+        <CommandBinding Command="ApplicationCommands.New" Executed="New"/>
+        <CommandBinding Command="ApplicationCommands.Open" Executed="Open"/>
+        <CommandBinding Command="ApplicationCommands.Save" Executed="Save"/>
+    </Window.CommandBindings>
+
+    <DockPanel>
+        <Menu DockPanel.Dock="Top">
+
+        </Menu>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="10*"/>
+            </Grid.RowDefinitions>
+            <Slider x:Name="CountdownValue" Minimum="1" Maximum="100"/>
+            <ListBox x:Name="Countdowns" Grid.Row="1">
+
+            </ListBox>
+            <Button x:Name="NewCD" Content="Neuer Countdown" Grid.Column="1" HorizontalAlignment="Left" Margin="10,5,0,0" VerticalAlignment="Top" Height="29" Width="110" Click="NewCD_Click"/>
+            <Button x:Name="NewListBox" Content="Löschen" Grid.Column="1" HorizontalAlignment="Left" Margin="170,0,0,5" VerticalAlignment="Bottom" Height="29" Width="85" Command="ApplicationCommands.New"/>
+            <Button x:Name="Save" Content="Save" Grid.Column="1" HorizontalAlignment="Left" Margin="20,10,0,0" Grid.Row="1" VerticalAlignment="Top" Height="35" Width="100" Command="ApplicationCommands.Save"/>
+            <Button x:Name="Open" Content="Button" Grid.Column="1" HorizontalAlignment="Left" Margin="170,11,0,0" Grid.Row="1" VerticalAlignment="Top" Height="29" Width="85" RenderTransformOrigin="0.5,0.5" Command="ApplicationCommands.Open">
+                <Button.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="0.492"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Button.RenderTransform>
+            </Button>
+
+        </Grid>
+    </DockPanel>
+</Window>

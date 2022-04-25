@@ -1,0 +1,116 @@
+
+Command Binding:
+
+<Window.CommandBindings>
+        <CommandBinding Command="MediaCommands.Stop" 
+                   Executed="Stop_Executed" />
+</Window.CommandBindings>
+
+//dabei ist Command der name des commands
+// Executed der Funktionsname in der mainwindows.cs der durch das binding ausgeführt werden soll
+//der dazugehörige aufruf im xaml
+  
+<Button x:Name="StopButton" Margin="0,0,10,0" Command="MediaCommands.Stop">
+	<BitmapImage UriSource="images/stop.png"/>
+</Button>
+
+//Einfach in Button Element mit Command="commandName"
+
+//Video Element
+
+//Im xaml:
+	<MediaElement Name="VideoElement" LoadedBehavior="Manual"/>
+	
+//Im Code
+	Mit VideoElement.Source = new uri(src); Pfad von Medium setzen
+	Mit VideoElement.Play();  abspielen
+	Mit VideoElement.Position = new TimeSpan(0, 0, 0, 0);
+	Mit VideoElement.Stop(); Stoppen
+
+//Custom Control
+
+//auf Button Click Event geben
+Button btn = (Button)this.Template.FindName("btn", this);
+btn.Click += (s, a) =>
+            {
+                btnClickFunc();
+            };
+
+//Dependency Propertys
+		public static readonly DependencyProperty
+            MinimumProperty = DependencyProperty.Register(
+                    "Minimum",
+                  typeof(int),
+                     typeof(IndicatorControl),
+            new FrameworkPropertyMetadata(0, FrameworkPropertyMetadataOptions.BindsTwoWayByDefault,
+                new PropertyChangedCallback(Methode)
+        ));
+		
+//Bindings
+//Textboxen clonen
+	<TextBox x:Name="inputVname" HorizontalAlignment="Left" Height="23" Margin="63,86,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Text="Vorname"/>
+    <TextBox x:Name="inputNName" HorizontalAlignment="Left" Height="23" Margin="63,134,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Text="{Binding ElementName=inputVname, Path=Text, Mode=TwoWay}"/>
+
+
+//Data Template
+//Unten Binding VName NName Geb sind public strings in der Klasse mit Setter und Getter
+			<ListBox  Height="175" Margin="369,86,0,0" Width="310"  x:Name="PersonLB" SelectionMode="Extended">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Grid Width="{Binding ElementName=PersonLB, Path=ActualWidth}">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Grid.Column="0" FontStyle="Italic" Text="{Binding VName}" HorizontalAlignment="Center"/>
+                        <TextBlock Grid.Column="1" Text="{Binding NName}" HorizontalAlignment="Center"/>
+                        <TextBlock Grid.Column="2" Text="{Binding Geb}" HorizontalAlignment="Center"/>
+                    </Grid>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+
+	PersonLB.Source = PersonListe;
+
+//XML Lesen/Read Explorer öffnen um Datei zu suchen
+			string path = "";
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "xml files (*.xml)|*.xml|All files (*.*)|*.*";
+            openFileDialog.FilterIndex = 1;
+
+            if (openFileDialog.ShowDialog() == true)
+            {
+                path = openFileDialog.FileName;
+
+            }
+
+            XmlSerializer reader = new XmlSerializer(typeof(PersonList));
+            FileStream file = File.OpenRead(path);
+            PersonList personListObj = new PersonList();
+            personListObj = (PersonList)reader.Deserialize(file);
+
+            personList = personListObj.PersonListCollection;
+            PersonLB.ItemsSource = personList;
+
+//XML Schreiben/Write
+			PersonList personListObj = new PersonList();
+            personListObj.PersonListCollection = personList;
+
+            XmlSerializer writer = new XmlSerializer(typeof(PersonList));
+
+            string path = "";
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            saveFileDialog.Filter = "xml files (*.xml)|*.xml|All files (*.*)|*.*";
+            saveFileDialog.FilterIndex = 1;
+
+            if (saveFileDialog.ShowDialog() == true)
+            {
+                path = saveFileDialog.FileName;
+                
+            }
+
+            FileStream file = File.Create(path);
+            writer.Serialize(file, personListObj);
+            file.Close();
+

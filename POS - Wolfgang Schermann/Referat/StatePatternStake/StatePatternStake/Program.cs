@@ -120,7 +120,7 @@ namespace StatePatternStake
         {
             this.currentTemp = currentTemp;
             this.steak = steak;
-            canEat = true; //We can now eat the steak
+            canEat = true; //Das Steak ist jetzt essbar
             Initialize();
         }
 
@@ -203,9 +203,7 @@ namespace StatePatternStake
         }
     }
 
-    /// <summary>
-    /// A Concrete State class
-    /// </summary>
+
     class Medium : Doneness
     {
         public Medium(Doneness state) : this(state.CurrentTemp, state.Steak) { }
@@ -253,9 +251,7 @@ namespace StatePatternStake
         }
     }
 
-    /// <summary>
-    /// A Concrete State class
-    /// </summary>
+
     class WellDone : Doneness
     {
         public WellDone(Doneness state) : this(state.CurrentTemp, state.Steak) { }
@@ -305,14 +301,13 @@ namespace StatePatternStake
     {
         static void Main(string[] args)
         {
-            //Let's cook a steak!
             Steak account = new Steak("T-Bone");
 
-            // Apply temperature changes
+            // Temperatur ändern
             account.AddTemp(120);
             account.AddTemp(15);
             account.AddTemp(15);
-            account.RemoveTemp(10); //Yes I know cooking doesn't work this way, bear with me.
+            account.RemoveTemp(10);
             account.RemoveTemp(15);
             account.AddTemp(20);
             account.AddTemp(20);

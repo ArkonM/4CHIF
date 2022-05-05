@@ -28,6 +28,9 @@ namespace Solitaire
         }
 
         Ellipse moving = null;
+
+        List<Border> borderList = new List<Border>();
+
         private Point clickPosition;
 
         private void Ellipse_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
@@ -85,14 +88,14 @@ namespace Solitaire
         private void Grid_Creation(int size, String method)
         {
             Spiel.ShowGridLines = true;
-            for(int i = 0; i < size; i++)
+            for (int i = 0; i < size; i++)
             {
                 Spiel.RowDefinitions.Add(new RowDefinition());
                 Spiel.ColumnDefinitions.Add(new ColumnDefinition());
             }
 
-            for(int y = 0; y < size; y++)
-            { 
+            for (int y = 0; y < size; y++)
+            {
                 for (int x = 0; x < size; x++)
                 {
                     Border border = new Border();
@@ -100,13 +103,28 @@ namespace Solitaire
 
                     border.Background = Brushes.Gray;
 
-                    if(((x >= 3 && x <= 5) || (y >= 3 && y <= 5))){
+                    if (((x >= 3 && x <= 5) || (y >= 3 && y <= 5)))
+                    {
                         border.Background = Brushes.White;
                         border.AllowDrop = true;
                         border.Drop += Border_Drop;
                     }
                     Grid.SetRow(border, x);
                     Grid.SetColumn(border, y);
+
+                    Spiel.Children.Add(border);
+                    borderList.Add(border);
+                }
+            }
+
+            foreach(var border in borderList)
+            {
+                if(border.AllowDrop == true)
+                {
+                    int x = Grid.GetColumn(border);
+                    int y = Grid.GetRow(border);
+
+
                 }
             }
         }

@@ -13,7 +13,6 @@ export class HeroListComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    console.log("Servus")
   }
 
 }

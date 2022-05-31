@@ -44,6 +44,10 @@ namespace WPF_SQL_Datenbank
 
         private void getData()
         {
+            DataContext db = new DataContext(connection);
+
+            Books = db.GetTable<Book>();
+
             LB_Books.Items.Clear();
             var query = from p in Books select p;
             foreach (var book in query)
@@ -54,9 +58,9 @@ namespace WPF_SQL_Datenbank
 
         private void Btn_Submit_Click(object sender, RoutedEventArgs e)
         {
-            Books.InsertOnSubmit(new Book() { title = "Test", year = 2022 });
+            Books.InsertOnSubmit(new Book() { title = TB_title.Text, year = Int32.Parse(TB_year.Text) });
             db.SubmitChanges();
-            getData(); 
+            getData();
         }
     }
 }

@@ -52,9 +52,41 @@ namespace WPF_Waldwunder
         Table<Waldwunder> Waldwunders = db.GetTable<Waldwunder>();
         Table<Bilder> Bilder = db.GetTable<Bilder>();
 
+        WaldwunderList waldwunderList = new WaldwunderList();
+
         public MainWindow()
         {
             InitializeComponent();
+
+
+            for (int i = 0; i < 9; i++)
+            {
+                CBX_Bundesland.Items.Add((BundeslandEnum)i);
+            }
+
+            search();
+        }
+
+        private void search()
+        {
+            List<Waldwunder> wunderList = new List<Waldwunder>();
+            var query = from w in Waldwunders select w;
+            wunderList = query.ToList();
+            waldwunderList.waldwunderList = new System.Collections.ObjectModel.ObservableCollection<Waldwunder>(wunderList);
+            LB_DBresult.ItemsSource = waldwunderList.waldwunderList;
+        }
+
+        private void BTN_Add_Click(object sender, RoutedEventArgs e)
+        {
+            Waldwunder wunder = new Waldwunder();
+            wunder.name = TXB_Name.Text;
+            wunder.description = TXB_Descr.Text;
+            wunder.province = CBX_Bundesland.Text;
+            wunder.latitude =  float.Parse(TXB_Latit.Text);
+            wunder.longitude = float.Parse(TXB_Longit.Text);
+            wunder.type = TXB_Type.Text;
+
+            Waldwunders.InsertOnSubmit(wunder);
         }
     }
 }

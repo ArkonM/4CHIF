@@ -1,0 +1,15 @@
+﻿<Window x:Class="Waldwunderverwaltung.DialogArt"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Waldwunderverwaltung"
+        mc:Ignorable="d"
+        Title="DialogArt" Height="123" Width="593">
+    <UniformGrid Rows="2" Columns="2">
+        <Label Content="Art angeben:" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <TextBox x:Name="ArtBox" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" SelectionChanged="ArtBox_SelectionChanged"/>
+        <Button x:Name="CancelButton" Content="Abbrechen" Click="CancelButton_Click" />
+        <Button x:Name="OKButton" Content="Registrieren" Click="OKButton_Click" IsEnabled="False"/>
+    </UniformGrid>
+</Window>

@@ -1,0 +1,46 @@
+﻿<Window x:Class="Waldwunderverwaltung.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Waldwunderverwaltung"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="900" Loaded="Window_Loaded" SizeChanged="Window_SizeChanged">
+    <Grid>
+        <DockPanel>
+            <Menu DockPanel.Dock="Top" Name="mnuMenu">
+                <MenuItem Header="_Edit">
+                    <MenuItem Header="Neues Waldwunder" Click="AddWaldwunder_Click"/>
+                    <Separator />
+                </MenuItem>
+                <MenuItem Header="Stichwort suchen" Click="MenuItem_Click"/>
+                <MenuItem Header="Art suchen" Click="MenuItem_Click_1"/>
+                <MenuItem Header="Ort suchen" Click="MenuItem_Click_2"/>
+            </Menu>
+            <DockPanel>
+                <DockPanel DockPanel.Dock="Right" Width="200" MaxWidth="200">
+                    <Button x:Name="AnzeigenButton" Content="Anzeigen" Click="AnzeigenButton_Click" DockPanel.Dock="Bottom" IsEnabled="False"/>
+                    <ListBox x:Name="WaldLB">
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <Grid Width="{Binding ElementName=WaldLB, Path=ActualWidth}">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <TextBlock Grid.Column="0" FontStyle="Italic" Text="{Binding Name}" HorizontalAlignment="Center"/>
+                                    <TextBlock Grid.Column="1" Text="{Binding Type}" HorizontalAlignment="Center"/>
+                                </Grid>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+                </DockPanel>
+                <Canvas x:Name="CanvasMap">
+                    <Canvas.Background>
+                        <ImageBrush ImageSource="Karte.png"/>
+                    </Canvas.Background>
+                </Canvas>
+            </DockPanel>
+        </DockPanel>
+    </Grid>
+</Window>

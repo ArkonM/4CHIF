@@ -1,0 +1,20 @@
+﻿<Window x:Class="Waldwunderverwaltung.DialogOrt"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Waldwunderverwaltung"
+        xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+        mc:Ignorable="d"
+        Title="DialogOrt" Height="131" Width="698">
+    <UniformGrid Rows="3" Columns="2">
+        <Label Content="Latitude: " HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <xctk:DecimalUpDown x:Name="LatitudeNum" HorizontalAlignment="Center" Minimum="46.308597" Maximum="49.063175"
+                                DefaultValue="46.308597" DisplayDefaultValueOnEmptyText="True" Increment=".000001"/>
+        <Label Content="Longitude: " HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <xctk:DecimalUpDown x:Name="LongitudeNum" HorizontalAlignment="Center" Minimum="9.362383" Maximum="17.231941"
+                                        DefaultValue="9.362383" DisplayDefaultValueOnEmptyText="True" Increment=".000001"/>
+        <Button x:Name="CancelButton" Content="Abbrechen" Click="CancelButton_Click" />
+        <Button x:Name="OKButton" Content="Registrieren" Click="OKButton_Click"/>
+    </UniformGrid>
+</Window>

@@ -1,0 +1,47 @@
+private void AddPicture_Click(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog dialog = new OpenFileDialog();
+            dialog.Filter = "Bild-Datein | .png;.jpg; .jpeg;.png | All-Files | .";
+            dialog.Multiselect = true;
+            bool? result = dialog.ShowDialog();
+            if (result == true)
+            {
+                foreach (string file in dialog.FileNames)
+                {
+
+                    bilder.Add(file);
+                    Pictures.Items.Add(System.IO.Path.GetFileName(file));
+                }
+            }
+        }
+int i = 1;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                foreach(string s in bilder)
+                {
+                    Bilder b = new Bilder();
+                    string newPath = "D:\Schule\POS\Test\Test\images\";
+                    string newName = waldwunder.name;
+                    newName += i.ToString();
+                    newName += System.IO.Path.GetExtension(s);
+                    i++;
+                    File.Copy(s, newPath + newName);
+                    b.name = newName;
+                    b.Waldwunder = w;
+                    db = new WaldwunderCatalog();
+                    db.Bilder.InsertOnSubmit(b);
+                    db.SubmitChanges();
+                }

@@ -1,0 +1,55 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <form>
+        <div class="col-md-6">
+          <label>Anrede</label>
+        </div>
+        <div class="col-md-6">
+          <input [(ngModel)]="orderRequest.anrede" name="anrede">
+        </div>
+
+        <div class="col-md-6">
+          <label>Vorname</label>
+        </div>
+        <div class="col-md-6">
+          <input [(ngModel)]="orderRequest.vorname" name="vorname">
+        </div>
+
+        <div class="col-md-6">
+          <label>Nachname</label>
+        </div>
+        <div class="col-md-6">
+          <input [(ngModel)]="orderRequest.name" name="name">
+        </div>
+
+        <div class="col-md-6">
+          <label>Straße</label>
+        </div>
+        <div class="col-md-6">
+          <input [(ngModel)]="orderRequest.strasse" name="strasse">
+        </div>
+
+        <div class="col-md-6">
+          <label>Postleitzahl</label>
+        </div>
+        <div class="col-md-6">
+          <input [(ngModel)]="orderRequest.plz" name="plz">
+        </div>
+
+        <div class="col-md-6">
+          <label>Ort</label>
+        </div>
+        <div class="col-md-6">
+          <input [(ngModel)]="orderRequest.ort" name="ort">
+        </div>
+        <div>
+          <button class="btn btn-danger" (click)="abbruch()">Abbrechen</button>
+        </div>
+        <div>
+          <button class="btn btn-success" (click)="sendRequest()">Jetzt Kaufen</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

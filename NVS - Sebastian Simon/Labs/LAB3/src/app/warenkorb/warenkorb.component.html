@@ -1,0 +1,22 @@
+<div class="container">
+  <div *ngFor="let i of items">
+    <div class="row">
+      <div class="col-3 border border-2 border-dark">
+        <p>{{i.productName}}</p>
+      </div>
+      <div class="col-3 border border-2 border-dark">
+        <p>{{i.preis}}€</p>
+      </div>
+      <div class="col-2 border border-2 border-dark">
+        <p>{{i.count}}</p>
+      </div>
+      <div class="col-2 border border-2 border-dark">
+        <p>{{i.count * i.preis}}€</p>
+      </div>
+      <div class="col-2 border border-2 border-dark">
+        <td><button btn class="btn btn-danger"  (click)="delete(i)">Löschen</button></td>
+      </div>
+    </div>
+  </div>
+  <p>Gesamtpreis: {{summe}}€</p>
+</div>
